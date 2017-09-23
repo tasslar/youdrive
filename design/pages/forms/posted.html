@@ -17,7 +17,6 @@
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
-  
     <!--custom -->
   <link rel="stylesheet" href="../../custom/css/custom.css">
 
@@ -340,6 +339,18 @@
           </ul>
         </li>
         
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-star"></i> <span>Nachrichten</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="active"><a href="posted.html"><i class="fa fa-circle-o"></i>Gesendet</a></li>
+           </ul>
+        </li>
+        
        <li class="treeview">
           <a href="#">
             <i class="fa fa-share-alt"></i> <span>Manage Branches</span>
@@ -396,55 +407,50 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Übersicht
+       Gesendet
        </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-         <li class="active">Übersicht</li>
+         <li class="active">Gesendet</li>
       </ol>
     </section>
     
     <section class="content-header">
-    	<div class="row">
-        <div class="col-xs-12">
-          <div class="box box-default">
+           <div class="box box-default">
              <div class="box-body">
-             <form>
-                    <div class="col-sm-3">
-                       <select class="form-control">
-                        <option>Alle Filialen</option>
-                        <option>Fahrschule Mentor George Sood</option>
-                       </select>
-               		 </div>
-                     <div class="col-sm-3">
-                       <select class="form-control">
-                        <option>Alle Klassen</option>
-                        <option>A</option>
-                        <option>A1</option>
-                        <option>B</option>
-                        <option>BE</option>
-                       </select>
-               		 </div>
-                     <div class="col-sm-2">
-                       <select class="form-control">
-                        <option>Alle Status</option>
-                        <option>Aktive</option>
-                        <option>Deaktivierte</option>
-                       </select>
-               		 </div>
-                     
-                      <div class="col-sm-4">
-                            <div class="input-group">
+             <div class="row">
+           		 <div class="col-sm-8"><a href="#"><button type="button" class="btn btn-primary pull-left" data-toggle="modal" data-target="#modal-default" data-dismiss="modal"><i class="fa fa-plus-square"></i> &nbsp;Neue Nachricht</button></a>
+             </div>
+             <div class="col-sm-3">
+             <select class="form-control">
+                <option>Löschen</option>
+                <option>Löschen</option>
+            </select>
+            </div>
+             <div class="col-sm-1">
+            <button type="button" class="btn btn-primary pull-left" data-dismiss="modal"> Ok</button>
+            </div>
+          </div>
+          
+           <div class="row ">
+               <div class="col-sm-12">
+               		<div class=" line-b"></div>
+               </div>
+           </div>
+          
+          <div class="row ">
+              <div class="col-sm-8"></div>
+              <div class="col-sm-4">
+              			<div class="input-group">
                                 <input type="text" name="search" class="form-control" placeholder="Search">
                                 <div class="input-group-btn">
                                     <button type="submit" name="submit" class="btn btn-danger btn-flat"><i class="fa fa-search"></i>
                                     </button>
                                 </div>
                             </div>
-                		 </div>
-                         </form>
               </div>
           </div>
+          
         </div>
       </div>
      </section>
@@ -454,90 +460,30 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">Einträge: 1 - 2 von 2</h3>
-            </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <table id="example2" class="table table-bordered table-striped table-hover">
+              <table id="example2" class="table table-bordered table-striped table-striped table-hover">
                 <thead>
                 <tr>
-                  <th width="98">Bild</th>
-                  <th width="161">Fahrlehrer</th>
-                  <th width="213">Kontaktdaten</th>
-                  <th width="107">Klassen</th>
-                  <th width="204">Filialen</th>
-                  <th width="62">Aktiv</th>
+                  <th width="98"><input type="checkbox"></th>
+                  <th width="204">Bild</th>
+                  <th width="210">Empfänger</th>
+                  <th width="62">Nachricht</th>
+                  <th width="62">Datum </th>
                   </tr>
                 </thead>
                 <tbody>
                 <tr>
-                  <td><i class="fa fa-file-image-o"></i></td>
-                  <td><a href="driving_instructors_edit.html" class=" text-orange">Harish Kumar</a> </td>
-                  <td><strong>Telefon:</strong><br/>
-<strong>Fax:</strong><br/>
-<strong>E-Mail: </strong><a href="mailto:david.anands@gmail.com ">david.anands@gmail.com </a></td>
-                  <td>B</td>
-                  <td>Fahrschule Mentor  George Sood </td>
-                  <td><button type="button" class=" btn bg-orange" data-toggle="modal" data-target="#modal-default"><i class="fa fa-check-square-o"></i></button></td>
+                  <td>Keine Nachrichten vorhanden</td>
+                  <td> </td>
+                  <td></td>
+                  <td>&nbsp;</td>
+                  <td> </td>
                   </tr>
-                <tr>
-                  <td><i class="fa fa-file-image-o"></i></td>
-                  <td><a href="driving_instructors_edit.html" class=" text-orange">hema karthi</a> </td>
-                  <td><strong>Telefon:</strong><br/>
-                      <strong>Fax:</strong><br/>
-                      <strong>E-Mail: </strong><a href="mailto:david.anands@gmail.com ">david.anands@gmail.com </a></td>
-                  <td>B</td>
-                  <td>Fahrschule Mentor  George Sood </td>
-                  <td><button type="button" class=" btn bg-orange" data-toggle="modal" data-target="#modal-default"><i class="fa fa-check-square-o"></i></button></td>
-                </tr>
-                <tr>
-                  <td><i class="fa fa-file-image-o"></i></td>
-                  <td><a href="driving_instructors_edit.html" class=" text-orange">Harish Kumar</a> </td>
-                  <td><strong>Telefon:</strong><br/>
-                      <strong>Fax:</strong><br/>
-                      <strong>E-Mail: </strong><a href="mailto:david.anands@gmail.com ">david.anands@gmail.com </a></td>
-                  <td>B</td>
-                  <td>Fahrschule Mentor  George Sood </td>
-                  <td><button type="button" class=" btn bg-orange" data-toggle="modal" data-target="#modal-default"><i class="fa fa-check-square-o"></i></button></td>
-                </tr>
-                <tr>
-                  <td><i class="fa fa-file-image-o"></i></td>
-                  <td><a href="driving_instructors_edit.html" class=" text-orange">Harish Kumar</a> </td>
-                  <td><strong>Telefon:</strong><br/>
-                      <strong>Fax:</strong><br/>
-                      <strong>E-Mail: </strong><a href="mailto:david.anands@gmail.com ">david.anands@gmail.com </a></td>
-                  <td>B</td>
-                  <td>Fahrschule Mentor  George Sood </td>
-                  <td><button type="button" class=" btn bg-orange" data-toggle="modal" data-target="#modal-default"><i class="fa fa-check-square-o"></i></button></td>
-                </tr>
-                <tr>
-                  <td><i class="fa fa-file-image-o"></i></td>
-                  <td><a href="driving_instructors_edit.html" class=" text-orange">hema karthi</a> </td>
-                  <td><strong>Telefon:</strong><br/>
-                      <strong>Fax:</strong><br/>
-                      <strong>E-Mail: </strong><a href="mailto:david.anands@gmail.com ">david.anands@gmail.com </a></td>
-                  <td>B</td>
-                  <td>Fahrschule Mentor  George Sood </td>
-                  <td><button type="button" class=" btn bg-orange" data-toggle="modal" data-target="#modal-default"><i class="fa fa-check-square-o"></i></button></td>
-                </tr>
-                <tr>
-                  <td><i class="fa fa-file-image-o"></i></td>
-                  <td><a href="driving_instructors_edit.html" class=" text-orange">Harish Kumar</a> </td>
-                  <td><strong>Telefon:</strong><br/>
-                      <strong>Fax:</strong><br/>
-                      <strong>E-Mail: </strong><a href="mailto:david.anands@gmail.com ">david.anands@gmail.com </a></td>
-                  <td>B</td>
-                  <td>Fahrschule Mentor  George Sood </td>
-                  <td><button type="button" class=" btn bg-orange" data-toggle="modal" data-target="#modal-default"><i class="fa fa-check-square-o"></i></button></td>
-                </tr>
                 </tbody>
                 <tfoot>
                 </tfoot>
               </table>
-            <br/>  
-<strong>Einträge: 1 - 9 von 9</strong>
-
             </div>
             <!-- /.box-body -->
           </div>
@@ -551,21 +497,27 @@
   </div>
   
   
-  <!-- -->
   <div class="modal fade" id="modal-default">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Fahrlehrer deaktivieren</h4>
+                <h4 class="modal-title">Neue Nachricht</h4>
               </div>
-              <div class="modal-body">
-                <p>Möchten Sie Harish Kumar wirklich deaktivieren </p>
-              </div>
+               <div class="box-body pad">
+               	<p>Empfänger*</p>
+                	 <input type="text" name="search" class="form-control" >
+               <br/>
+                    <form>
+                        <textarea id="editor1" name="editor1" rows="10" cols="80">
+                         This is my textarea to be replaced with CKEditor.
+                        </textarea>
+                    </form>
+                </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Abbrechen</button>
-                <button type="button" class="btn btn-primary">Ja, Fahrlehrer deaktivieren</button>
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
               </div>
             </div>
             <!-- /.modal-content -->
@@ -573,10 +525,6 @@
           <!-- /.modal-dialog -->
         </div>
         <!-- /.modal -->
-  
-
-  
-  <!-- -->
   
    
   <!-- /.content-wrapper -->
@@ -794,5 +742,19 @@
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
+
+<script src="../../bower_components/ckeditor/ckeditor.js"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<script>
+  $(function () {
+    // Replace the <textarea id="editor1"> with a CKEditor
+    // instance, using default configuration.
+    CKEDITOR.replace('editor1')
+    //bootstrap WYSIHTML5 - text editor
+    $('.textarea').wysihtml5()
+  })
+    
+</script>
 </body>
 </html>
