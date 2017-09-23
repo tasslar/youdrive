@@ -1,0 +1,32 @@
+.scroll{height:400px;    overflow-y:auto;}
+.m-r{ margin-right:10px;}
+.fa-file-image-o::before { font-size:35px;}
+.panel-title .fa-arrow-circle-right:before {
+	color:#ba68c8;
+	font-size:18px;
+	margin-right:7px; 
+  }
+.panel-title .fa-arrow-circle-down:before {
+    color:#ba68c8;
+	font-size:18px;
+	margin-right:7px; 
+}
+.panel-title> a{
+   	color:#000;
+}
+.fa-file-pdf-o:before {
+	color:#ea0b0c;
+	font-size:28px;
+	margin-right:15px;
+ }
+.panel input[type="checkbox"] {
+	width:19px;
+	height:19px;
+  
+ }
+ .panel-group {
+    margin-bottom: 10px;
+} 
+.panel{
+    margin-bottom: 10px;
+}
