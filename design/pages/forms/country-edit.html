@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>AdminLTE 2 | General Form Elements</title>
   <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
@@ -27,10 +29,11 @@
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
-  
     <!--custom -->
   <link rel="stylesheet" href="../../custom/css/custom.css">
 
+  
+    <link rel="stylesheet" href="../../custom/css/tab.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -408,7 +411,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-           <li class="active"><a href="country-edit.html"><i class="fa fa-circle-o"></i>Landmeister</a></li>
+            <li class="active"><a href="country-edit.html"><i class="fa fa-circle-o"></i>Landmeister</a></li>
             <li class="active"><a href="area-edit.html"><i class="fa fa-circle-o"></i>Bereichsmeister</a></li>
             <li class="active"><a href="postal-code-edit.html"><i class="fa fa-circle-o"></i>Postleitzahl</a></li>
            </ul>
@@ -417,118 +420,184 @@
        </ul>
     </section>
     <!-- /.sidebar -->
-  </aside>
-  <!-- Content Wrapper. Contains page content -->
+  </aside>  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-      Neue Preisgruppe anlegen
-       </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-         <li class="active">Neue Preisgruppe anlegen</li>
-      </ol>
-    </section>
-    
-    <section class="content-header">
-    	<div class="row">
-        <div class="col-xs-12">
-          <div class="box box-default">
-             <div class="box-body">
-           		 <a href="vehicle_categories.html"><button type="button" class="btn btn-green pull-left" data-dismiss="modal"><i class="fa fa-backward"></i>Zur Übersicht</button></a>
- 				<button type="button" class="btn btn-primary pull-right"><i class="fa fa fa-save"></i>&nbsp; Speichern</button>
-                <button type="button" class="btn btn-default pull-right" style="margin-right:15px;"><i class="fa fa fa-close"></i>&nbsp; Abbrechen</button>
+  
+ 
+<!--home-content-top starts from here-->
+<section class="home-content-top">
+     <!--our-quality-shadow-->
+      <div class="tabbable-panel margin-tops4 ">
+      <div class="tabbable-line">
+        <ul class="nav nav-tabs tabtop  tabsetting">
+          <li class="active "> <a href="#tab_default_1" data-toggle="tab">Landmeister</a> </li>
+          <li> <a href="#tab_default_2" data-toggle="tab">Bereichsmeister</a> </li>
+          <li> <a href="#tab_default_3" data-toggle="tab">Postleitzahl</a> </li>
+          </ul>
+        <div class="tab-content margin-tops">
+          <div class="tab-pane active fade in" id="tab_default_1">
+             
+         <section class="content-header">
+            <h1>Landmeister</h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">Landmeister</li>
+            </ol>
+        </section>
+       
+       <section class="content-header">
+            <div class="row">
+                <div class="col-xs-12">
+                  <div class="box box-default">
+                     <div class="box-body">
+                         <a href="country-add.html"><button type="button" class="btn btn-green pull-right"><i class="fa fa-plus"></i>&nbsp; Hinzufügen</button></a>
+                        <a href="country-edit.html"><button type="button" class="btn btn-primary pull-right" style="margin-right:15px;"><i class="fa fa-eye"></i>&nbsp; Aussicht</button></a>
+                    </div>
+                  </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
      </section>
 
     <!-- Main content -->
     <section class="content">
-      <div class="row">
-        <!-- left column -->
-        <div class="col-md-6">
-          
-
-          <!-- Form Element sizes -->
-          <div class="box box-gray">
-            <div class="box-header with-border">
-              <h3 class="box-title">Allgemein</h3>
-            </div>
-            <div class="box-body">
-            
-            <form role="form">
-                <!-- text input -->
-                    <div class="form-group">
-                      <label>Preisgruppenname</label>
-                      <input type="text" class="form-control" >
-                    </div>
-                
-                <div class="form-group">
-                      <label>Standardkat.</label><br/>
-                     <div class="form-group" style="margin-bottom:0">
-                   <input type="checkbox" class="flat-red" checked></div>
-                    </div>
-                
-                 
-                <div class="form-group">
-                  <label>Beschreibung</label>
-                  <textarea class="form-control" rows="3" ></textarea>
-                </div>
-               </form>
-             </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-
-
-         
-
-        </div>
+        <div class="row">
         <!--/.col (left) -->
         <!-- right column -->
-        <div class="col-md-6">
-          <!-- Horizontal Form -->
-          
-           
-          
-           <!-- Input addon -->
-          <div class="box box-gray">
-                <div class="box-header with-border">
-                  <h3 class="box-title">Ausbildungsklassen*</h3>
-                </div>
-                <div class="box-body">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default">
-                    <i class="fa fa-list-ul"></i>&nbsp;Ausbildungsklassen
-                     </button>
-                  </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-          
-          
-          
-          <div class="box box-gray">
-            <div class="box-header with-border">
-              <h3 class="box-title">Preise</h3>
-            </div>
-            <div class="box-body">
-              <p>Preise können erst erstellt werden, wenn die Fahrzeugkategorie gespeichert wurde</p>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-         </div>
-        <!--/.col (right) -->
-      </div>
-      <!-- /.row -->
+            <div class="col-md-12">
+            <!-- general form elements disabled -->
+                    <div class="box box-gray">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Landmeister</h3>
+                        </div>
+                    <!-- /.box-header -->
+                        <div class="box-body">
+                            <p>Land - Germany</p>
+                             <p>Land- India</p>   
+                        </div>
+                    <!-- /.box-body -->
+                    </div>
+            <!-- /.box -->
+             </div>
+        <!--/.col -->
+        </div>
+    <!-- /.row -->
     </section>
     <!-- /.content -->
+         
+          </div><!--tab_default_1 -->
+          
+          
+    <div class="tab-pane fade" id="tab_default_2">
+      
+      <section class="content-header">
+            <h1>Bereichsmeister</h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">Bereichsmeister</li>
+            </ol>
+        </section>
+       
+       <section class="content-header">
+            <div class="row">
+                <div class="col-xs-12">
+                  <div class="box box-default">
+                     <div class="box-body">
+                         <a href="area-add.html"><button type="button" class="btn btn-green pull-right"><i class="fa fa-plus"></i>&nbsp; Hinzufügen</button></a>
+                        <a href="area-edit.html"><button type="button" class="btn btn-primary pull-right" style="margin-right:15px;"><i class="fa fa-eye"></i>&nbsp; Aussicht</button></a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+     </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+        <!--/.col (left) -->
+        <!-- right column -->
+            <div class="col-md-12">
+            <!-- general form elements disabled -->
+                    <div class="box box-gray">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Bereichsmeister</h3>
+                        </div>
+                    <!-- /.box-header -->
+                        <div class="box-body">
+                            <p>Bereich - Germany</p>
+                             <p>Bereich - Chennai</p>   
+                        </div>
+                    <!-- /.box-body -->
+                    </div>
+            <!-- /.box -->
+             </div>
+        <!--/.col -->
+        </div>
+    <!-- /.row -->
+    </section>
+    <!-- /.content -->
+               </div><!--tab_default_2 -->
+           
+          <div class="tab-pane fade" id="tab_default_3">
+                 <section class="content-header">
+            <h1>Postleitzahl</h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">Postleitzahl</li>
+            </ol>
+        </section>
+       
+       <section class="content-header">
+            <div class="row">
+                <div class="col-xs-12">
+                  <div class="box box-default">
+                     <div class="box-body">
+                         <a href="postal-code-add.html"><button type="button" class="btn btn-green pull-right"><i class="fa fa-plus"></i>&nbsp; Hinzufügen</button></a>
+                        <a href="postal-code-edit.html"><button type="button" class="btn btn-primary pull-right" style="margin-right:15px;"><i class="fa fa-eye"></i>&nbsp; Aussicht</button></a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+     </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+        <!--/.col (left) -->
+        <!-- right column -->
+            <div class="col-md-12">
+            <!-- general form elements disabled -->
+                    <div class="box box-gray">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Postleitzahl</h3>
+                        </div>
+                    <!-- /.box-header -->
+                        <div class="box-body">
+                            <p>Postleitzahl - Germany</p>
+                             <p>Postleitzahl - India</p>   
+                        </div>
+                    <!-- /.box-body -->
+                    </div>
+            <!-- /.box -->
+             </div>
+        <!--/.col -->
+        </div>
+    <!-- /.row -->
+    </section>
+    <!-- /.content -->
+        </div>
+           
+        </div>
+      </div>
+    </div>
+ </section>
+<!--home-content-top ends here--> 
+ 
+    
+
   </div>
   
-   <div class="modal fade" id="modal-default">
+   
+     <div class="modal fade" id="modal-default">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -537,7 +606,7 @@
                 <h4 class="modal-title">Klassenauswahl</h4>
               </div>
               <div class="modal-body scroll" >
-                 <table id="example2" class="table table-bordered stable-hover " >
+                 <table id="example2" class="table table-bordered table-hover " >
                 <thead>
                 <tr>
                   <th width="51"><input type="checkbox"/></th>
@@ -602,7 +671,6 @@
           <!-- /.modal-dialog -->
         </div>
         <!-- /.modal -->
-  
   
   <!-- /.content-wrapper -->
   <footer class="main-footer">
@@ -737,7 +805,6 @@
           <h3 class="control-sidebar-heading">General Settings</h3>
 
           <div class="form-group">
-
             <label class="control-sidebar-subheading">
               Report panel usage
               <input type="checkbox" class="pull-right" checked>
@@ -906,6 +973,5 @@
     })
   })
 </script>
-
 </body>
 </html>

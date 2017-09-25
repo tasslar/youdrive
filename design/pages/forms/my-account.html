@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>AdminLTE 2 | General Form Elements</title>
   <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
@@ -27,10 +29,11 @@
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
-  
     <!--custom -->
   <link rel="stylesheet" href="../../custom/css/custom.css">
 
+  
+    <link rel="stylesheet" href="../../custom/css/tab.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -408,127 +411,644 @@
             </span>
           </a>
           <ul class="treeview-menu">
-           <li class="active"><a href="country-edit.html"><i class="fa fa-circle-o"></i>Landmeister</a></li>
+            <li class="active"><a href="country-edit.html"><i class="fa fa-circle-o"></i>Landmeister</a></li>
             <li class="active"><a href="area-edit.html"><i class="fa fa-circle-o"></i>Bereichsmeister</a></li>
             <li class="active"><a href="postal-code-edit.html"><i class="fa fa-circle-o"></i>Postleitzahl</a></li>
            </ul>
         </li>
-         
-       </ul>
+        </ul>
     </section>
     <!-- /.sidebar -->
-  </aside>
-  <!-- Content Wrapper. Contains page content -->
+  </aside>  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-      Neue Preisgruppe anlegen
-       </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-         <li class="active">Neue Preisgruppe anlegen</li>
-      </ol>
-    </section>
-    
-    <section class="content-header">
-    	<div class="row">
-        <div class="col-xs-12">
-          <div class="box box-default">
-             <div class="box-body">
-           		 <a href="vehicle_categories.html"><button type="button" class="btn btn-green pull-left" data-dismiss="modal"><i class="fa fa-backward"></i>Zur Übersicht</button></a>
- 				<button type="button" class="btn btn-primary pull-right"><i class="fa fa fa-save"></i>&nbsp; Speichern</button>
-                <button type="button" class="btn btn-default pull-right" style="margin-right:15px;"><i class="fa fa fa-close"></i>&nbsp; Abbrechen</button>
+  
+  <section class="content-header">
+            <div class="row">
+                <div class="col-xs-12">
+                   <h2>Mein Konto</h2>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
+     </section>
+     
+<!--home-content-top starts from here-->
+<section class="home-content-top">
+     <!--our-quality-shadow-->
+      <div class="tabbable-panel ">
+      <div class="tabbable-line">
+        <ul class="nav nav-tabs tabtop  tabsetting">
+          <li class="active "> <a href="#tab_default_1" data-toggle="tab">Allgemein</a> </li>
+          <li> <a href="#tab_default_2" data-toggle="tab">Benutzerkonto</a> </li>
+          <li> <a href="#tab_default_3" data-toggle="tab">Personaldaten</a> </li>
+          </ul>
+        <div class="tab-content ">
+          <div class="tab-pane active fade in" id="tab_default_1">
+             
+        
+       <section class="content-header">
+            <div class="row">
+                <div class="col-xs-12">
+                  <div class="box box-default">
+                     <div class="box-body">
+                         <a href="country-add.html"><button type="button" class="btn btn-green pull-right"><i class="fa fa-plus"></i>&nbsp; Hinzufügen</button></a>
+                        <a href="country-edit.html"><button type="button" class="btn btn-primary pull-right" style="margin-right:15px;"><i class="fa fa-eye"></i>&nbsp; Aussicht</button></a>
+                    </div>
+                  </div>
+                </div>
+            </div>
      </section>
 
     <!-- Main content -->
-    <section class="content">
-      <div class="row">
-        <!-- left column -->
-        <div class="col-md-6">
-          
-
-          <!-- Form Element sizes -->
-          <div class="box box-gray">
+<section class="content">
+<div class="row">
+<!-- left column -->
+    <div class="col-md-6">
+    <!-- general form elements -->
+    <!-- Form Element sizes -->
+        <div class="box box-gray">
             <div class="box-header with-border">
-              <h3 class="box-title">Allgemein</h3>
+                <h3 class="box-title">Allgemein</h3>
             </div>
             <div class="box-body">
-            
-            <form role="form">
+                <form role="form">
                 <!-- text input -->
-                    <div class="form-group">
-                      <label>Preisgruppenname</label>
-                      <input type="text" class="form-control" >
-                    </div>
-                
+                <div class="row">
+                <div class="col-xs-4">
                 <div class="form-group">
-                      <label>Standardkat.</label><br/>
-                     <div class="form-group" style="margin-bottom:0">
-                   <input type="checkbox" class="flat-red" checked></div>
-                    </div>
-                
-                 
-                <div class="form-group">
-                  <label>Beschreibung</label>
-                  <textarea class="form-control" rows="3" ></textarea>
+                <label>Anrede/Titel*</label>
+                <select class="form-control">
+                <option>Herr</option>
+                <option>Frau</option>
+                </select>
                 </div>
-               </form>
-             </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-
-
-         
-
+                </div>
+                <div class="col-xs-8">
+                <div class="form-group">
+                <label style="text-indent:-999px">-</label>
+                <input type="text" class="form-control" placeholder="sangeetha">
+                </div>
+                </div>
+                </div>
+                <div class="form-group">
+                <label>Vorname*</label>
+                <input type="text" class="form-control" >
+                </div>
+                <div class="form-group">
+                <label>Nachname*</label>
+                <input type="text" class="form-control" >
+                </div>
+                <div class="form-group">
+                <label>Kürzel*</label>
+                <input type="text" class="form-control" >
+                </div>
+                <div class="form-group">
+                <label>Geburtsdatum</label>
+                <input type="text" class="form-control" >
+                </div>
+                </form>
+            </div>
+        <!-- /.box-body -->
         </div>
+    <!-- /.box -->
+
+    <div class="box box-gray">
+        <div class="box-header with-border">
+            <h3 class="box-title">Privat</h3>
+        </div>
+        <div class="box-body">
+            <form role="form">
+            <div class="form-group">
+            <label>Strasse und Hausnr*</label>
+            <input type="text" class="form-control" >
+            </div>
+            <!-- text input -->
+            <div class="row">
+            <div class="col-xs-4">
+            <div class="form-group">
+            <label>PLZ und Ort*</label>
+            <input type="text" class="form-control" placeholder="sangeetha">
+            </div>
+            </div>
+            <div class="col-xs-8">
+            <div class="form-group">
+            <label style="text-indent:-999px">-</label>
+            <input type="text" class="form-control" placeholder="sangeetha">
+            </div>
+            </div>
+            </div>
+            <div class="form-group">
+            <label>Land</label>
+            <select class="form-control">
+            <option>Herr</option>
+            <option>Frau</option>
+            </select>
+            </div>
+            <div class="form-group">
+            <label>Bundesland</label>
+            <input type="text" class="form-control" >
+            </div>
+            <div class="form-group">
+            <label>Telefon</label>
+            <input type="text" class="form-control" >
+            </div>
+            <div class="form-group">
+            <label>Handy</label>
+            <input type="text" class="form-control" >
+            </div>
+            <div class="form-group">
+            <label>E-Mail</label>
+            <input type="text" class="form-control" >
+            </div>
+            </form>
+        </div>
+    <!-- /.box-body -->
+    </div>
+<!-- /.box -->
+ 
+
+</div>
+<!--/.col (left) -->
+<!-- right column -->
+    <div class="col-md-6">
+    <!-- Horizontal Form -->
+        <div class="box box-gray">
+            <div class="box-header with-border">
+            <h3 class="box-title">Bild</h3>
+        </div>
+    <!-- /.box-header -->
+        <form class="form-horizontal">
+            <div class="box-body">
+            <input type="file" id="exampleInputFile">
+            </div>
+         </form>
+    </div><!-- /box box-info -->
+ <!-- /.box -->
+
+<!-- general form elements disabled -->
+<div class="box box-gray">
+<div class="box-header with-border">
+<h3 class="box-title">Betrieblich</h3>
+</div>
+<!-- /.box-header -->
+    <div class="box-body">
+        <form role="form">
+        <div class="form-group">
+        <label>Strasse und Hausnr </label>
+        <input type="text" class="form-control" >
+        </div>
+        <!-- text input -->
+        <div class="row">
+        <div class="col-xs-4">
+        <div class="form-group">
+        <label>PLZ und Ort </label>
+        <input type="text" class="form-control" placeholder="sangeetha">
+        </div>
+        </div>
+        <div class="col-xs-8">
+        <div class="form-group">
+        <label style="text-indent:-999px">-</label>
+        <input type="text" class="form-control" placeholder="sangeetha">
+        </div>
+        </div>
+        </div>
+        <div class="form-group">
+        <label>Land</label>
+        <select class="form-control">
+        <option>Land</option>
+        <option>Frau</option>
+        </select>
+        </div>
+        <div class="form-group">
+        <label>Bundesland</label>
+        <input type="text" class="form-control" >
+        </div>
+        
+        <div class="form-group" style="margin-bottom:0">
+        <input type="checkbox" class="flat-red" checked>&nbsp;<label>von Organisation übernehmen </label>
+        </div>
+        
+        <div class="form-group">
+        <label>Telefon</label>
+        <input type="text" class="form-control" >
+        </div>
+        <div class="form-group">
+        <label>Handy</label>
+        <input type="text" class="form-control" >
+        </div>
+        <div class="form-group">
+        <label>E-Mail</label>
+        <input type="text" class="form-control" >
+        </div>
+        
+        <div class="form-group" style="margin-bottom:0">
+        <input type="checkbox" class="flat-red" checked>&nbsp;<label>von Organisation übernehmen </label></div>
+        </form>
+    </div>
+<!-- /.box-body -->
+</div>
+<!-- /.box -->
+
+ 
+ <!-- /.box -->
+</div>
+<!--/.col (right) -->
+</div>
+<!-- /.row -->
+</section>
+    <!-- /.content -->
+           </div><!--tab_default_1 -->
+          
+     <div class="tab-pane fade" id="tab_default_2">
+        
+       <section class="content-header">
+            <div class="row">
+                <div class="col-xs-12">
+                  <div class="box box-default">
+                     <div class="box-body">
+                         <button type="button" class="btn btn-primary pull-right"><i class="fa fa fa-save"></i>&nbsp; Speichern</button>
+                        <button type="button" class="btn btn-default pull-right" style="margin-right:15px;"><i class="fa fa fa-close"></i>&nbsp; Abbrechen</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+     </section>
+
+    <!-- Main content -->
+        <section class="content">
+        <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+        <!-- general form elements -->
+        <!-- Form Element sizes -->
+        <div class="box box-gray">
+            <div class="box-header with-border">
+                <h3 class="box-title">E-Mailadresse ändern</h3>
+            </div>
+        <div class="box-body">
+         <form role="form">
+        <!-- text input -->
+        	 <div class="form-group">
+                <label>Aktuelle E-Mailadresse </label>
+                        <input type="text" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label>Neue E-Mailadresse </label>
+                        <input type="text" class="form-control" >
+            </div>
+             <div class="form-group">
+                <label>E-Mailadresse bestätigen </label>
+                        <input type="text" class="form-control" >
+            </div>
+            <button type="button" class="btn btn-primary pull-left"> E-Mailadresse ändern</button>
+        </form>
+        </div>
+        <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+        
+        <div class="box box-gray">
+        <div class="box-header with-border">
+        <h3 class="box-title">Passwort ändern</h3>
+        </div>
+       <div class="box-body">
+         <form role="form">
+        <!-- text input -->
+        	 <div class="form-group">
+                <label>Aktuelles Passwort </label>
+                        <input type="text" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label>Neues Passwort </label>
+                        <input type="text" class="form-control" >
+            </div>
+             <div class="form-group">
+                <label>Passwort bestätigen </label>
+                        <input type="text" class="form-control" >
+            </div>
+            <button type="button" class="btn btn-primary pull-left"> E-Mailadresse ändern</button>
+        </form>
+        </div>
+        <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+        
+          
+        </div><!--col-md-6 end -->
         <!--/.col (left) -->
         <!-- right column -->
         <div class="col-md-6">
-          <!-- Horizontal Form -->
-          
-           
-          
-           <!-- Input addon -->
-          <div class="box box-gray">
-                <div class="box-header with-border">
-                  <h3 class="box-title">Ausbildungsklassen*</h3>
-                </div>
-                <div class="box-body">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default">
-                    <i class="fa fa-list-ul"></i>&nbsp;Ausbildungsklassen
-                     </button>
-                  </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-          
-          
-          
-          <div class="box box-gray">
+        <!-- Horizontal Form -->
+       <div class="box box-gray">
             <div class="box-header with-border">
-              <h3 class="box-title">Preise</h3>
+                <h3 class="box-title">Benachrichtigungen</h3>
             </div>
+            
             <div class="box-body">
-              <p>Preise können erst erstellt werden, wenn die Fahrzeugkategorie gespeichert wurde</p>
+            <form role="form">
+               <div class="form-group" style="margin-bottom:0">
+                <input type="checkbox" class="flat-red" checked>&nbsp;&nbsp;&nbsp;&nbsp;<label>bei neuer Nachricht
+                 </label>
+              </div>
+              <br/>
+                <div class="form-group" style="margin-bottom:0">
+                <input type="checkbox" class="flat-red" checked>&nbsp;&nbsp;&nbsp;&nbsp;<label>Newsletter abonnieren
+                </label>
+              </div>
+              <br/>
+                <div class="form-group" style="margin-bottom:0">
+                <input type="checkbox" class="flat-red" checked>&nbsp;&nbsp;&nbsp;&nbsp;<label>Fragen an Fahrlehrer 
+                </label>
+              </div>
+              <br/>
+               <div class="form-group" style="margin-bottom:0">
+                <input type="checkbox" class="flat-red" checked>&nbsp;&nbsp;&nbsp;&nbsp;<label>Einrichtungsassistent aktivieren
+                </label>
+              </div>
+              <br/>
+              <div class="form-group" style="margin-bottom:0">
+                <input type="checkbox" class="flat-red" checked>&nbsp;&nbsp;&nbsp;&nbsp;<label>Einrichtungsassistent aktivieren
+                </label>
+              </div>
+              </form>
+             </div>
+        <!-- /.box-body -->
+        </div>
+         
+         
+            <div class="box box-gray">
+        <div class="box-header with-border">
+        <h3 class="box-title">Nickname ändern</h3>
+        </div>
+       <div class="box-body">
+         <form role="form">
+        <!-- text input -->
+        	 <div class="form-group">
+                <label>Nickname*</label>
+                        <input type="text" class="form-control" >
             </div>
-            <!-- /.box-body -->
+         </form>
+        </div>
+        <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+     
+         
+         
           </div>
-          <!-- /.box -->
-         </div>
         <!--/.col (right) -->
-      </div>
-      <!-- /.row -->
-    </section>
+        </div>
+        <!-- /.row -->
+        </section>
     <!-- /.content -->
+              </div><!--tab_default_2 -->
+           
+          <div class="tab-pane fade" id="tab_default_3">
+                <section class="content-header">
+                    <div class="row">
+                        <div class="col-xs-12">
+                          <div class="box box-default">
+                             <div class="box-body">
+                                 <button type="button" class="btn btn-primary pull-right"><i class="fa fa fa-save"></i>&nbsp; Speichern</button>
+                                <button type="button" class="btn btn-default pull-right" style="margin-right:15px;"><i class="fa fa fa-close"></i>&nbsp; Abbrechen</button>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+             </section>
+
+    <!-- Main content -->
+                           <section class="content">
+        <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+        <!-- general form elements -->
+        <!-- Form Element sizes -->
+        <div class="box box-gray">
+            <div class="box-header with-border">
+                <h3 class="box-title">Steuerangaben</h3>
+            </div>
+        <div class="box-body">
+         <form role="form">
+        <!-- text input -->
+        	 <div class="form-group">
+                <label>Familienstatus</label>
+                        <select class="form-control">
+                            <option>Herr</option>
+                            <option>Frau</option>
+                        </select>
+            </div>
+            
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="form-group">
+                        <label>Steuerklasse</label>
+                        <select class="form-control">
+                            <option>Herr</option>
+                            <option>Frau</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-8">
+                    <div class="form-group">
+                        <label>Kinder</label>
+                        <input type="text" class="form-control" placeholder="sangeetha">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Krankenversicherung</label>
+                <input type="text" class="form-control" >
+            </div>
+             
+        </form>
+        </div>
+        <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+        
+        <div class="box box-gray">
+        <div class="box-header with-border">
+        <h3 class="box-title">Einstellungsdatum und Urlaub</h3>
+        </div>
+        <div class="box-body">
+        <form role="form">
+            <div class="form-group">
+                <label>Eintrittsdatum</label>
+                <input type="text" class="form-control" >
+            </div>
+        <!-- text input -->
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="form-group">
+                        <label>Urlaubstage</label>
+                        <input type="text" class="form-control" placeholder="sangeetha">
+                    </div>
+                </div>
+                <div class="col-xs-8">
+                    <div class="form-group">
+                        <label>Resturlaub</label>
+                        <input type="text" class="form-control" placeholder="sangeetha">
+                    </div>
+                </div>
+            </div>
+             
+        </form>
+        </div>
+        <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+        
+        <div class="box box-gray">
+            <div class="box-header with-border">
+                <h3 class="box-title">Weitere Tätigkeiten</h3>
+            </div>
+        <!-- /.box-header -->
+        <form class="form-horizontal">
+            <div class="box-body">
+                <label>Zugleich tätig bei</label>	
+                 <input type="text"  class="form-control"> <br/>
+             </div>
+        <!-- /.box-footer -->
+        </form>
+         </div>
+         
+         
+                 <div class="box box-gray">
+        <div class="box-header with-border">
+        <h3 class="box-title">Bankverbindung</h3>
+        </div>
+        <div class="box-body">
+        <form role="form">
+            <div class="form-group">
+                <label>Kreditinstitut</label>
+                <input type="text" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label>Bankleitzahl</label>
+                <input type="text" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label>Kontonummer</label>
+                <input type="text" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label>IBAN</label>
+                <input type="text" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label>Swift-BIC</label>
+                <input type="text" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label>Kontoinhaber</label>
+                <input type="text" class="form-control" >
+            </div>
+         </form>
+        </div>
+        <!-- /.box-body -->
+        </div>
+         
+         
+        </div><!--col-md-6 end -->
+        <!--/.col (left) -->
+        <!-- right column -->
+        <div class="col-md-6">
+        <!-- Horizontal Form -->
+       <div class="box box-gray">
+        <div class="box-header with-border">
+        <h3 class="box-title">Gehalt</h3>
+        </div>
+        <div class="box-body">
+        <form role="form">
+            <div class="form-group">
+                <label>Stunden/Arbeitstag</label>
+                <input type="text" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label>Minuten/Lehreinheit</label>
+                <input type="text" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label>Grundlohn</label>
+                <input type="text" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label>Übungsstunde</label>
+                <input type="text" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label>Autobahnfahrt</label>
+                <input type="text" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label>Überlandfahrt</label>
+                <input type="text" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label>Beleuchtungsfahrt</label>
+                <input type="text" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label>Grundfahraufgaben</label>
+                <input type="text" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label>Zuschlag für Fahrstunden nach 20:00 Uhr</label>
+                <input type="text" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label>Unterrichte</label>
+                <input type="text" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label>Unterweisung am Fahrzeug</label>
+                <input type="text" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label>Prüfungen</label>
+                <input type="text" class="form-control" >
+            </div>
+             <div class="form-group">
+                <label>Sonstige Tätigkeiten</label>
+                <input type="text" class="form-control" >
+            </div>
+             <div class="form-group">
+                <label>Bonus A1</label>
+                <input type="text" class="form-control" >
+            </div>
+             <div class="form-group">
+                <label>Bonus A2</label>
+                <input type="text" class="form-control" >
+            </div>
+         </form>
+
+        </div>
+        <!-- /.box-body -->
+        </div>
+         
+          </div>
+        <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+        </section>
+        </div>
+          
+          
+          	
+          <div class="tab-pane fade" id="tab_default_4">
+           </div>
+           
+        </div>
+      </div>
+    </div>
+ </section>
+<!--home-content-top ends here--> 
+ 
+    
+
   </div>
   
-   <div class="modal fade" id="modal-default">
+   
+     <div class="modal fade" id="modal-default">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -537,7 +1057,7 @@
                 <h4 class="modal-title">Klassenauswahl</h4>
               </div>
               <div class="modal-body scroll" >
-                 <table id="example2" class="table table-bordered stable-hover " >
+                 <table id="example2" class="table table-bordered table-hover " >
                 <thead>
                 <tr>
                   <th width="51"><input type="checkbox"/></th>
@@ -602,7 +1122,6 @@
           <!-- /.modal-dialog -->
         </div>
         <!-- /.modal -->
-  
   
   <!-- /.content-wrapper -->
   <footer class="main-footer">
@@ -737,7 +1256,6 @@
           <h3 class="control-sidebar-heading">General Settings</h3>
 
           <div class="form-group">
-
             <label class="control-sidebar-subheading">
               Report panel usage
               <input type="checkbox" class="pull-right" checked>
@@ -906,6 +1424,5 @@
     })
   })
 </script>
-
 </body>
 </html>
