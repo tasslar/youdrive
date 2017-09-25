@@ -12,6 +12,18 @@
   <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
+  <!-- daterange picker -->
+  <link rel="stylesheet" href="../../bower_components/bootstrap-daterangepicker/daterangepicker.css">
+  <!-- bootstrap datepicker -->
+  <link rel="stylesheet" href="../../bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="../../plugins/iCheck/all.css">
+  <!-- Bootstrap Color Picker -->
+  <link rel="stylesheet" href="../../bower_components/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
+  <!-- Bootstrap time Picker -->
+  <link rel="stylesheet" href="../../plugins/timepicker/bootstrap-timepicker.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="../../bower_components/select2/dist/css/select2.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -436,7 +448,7 @@
                   <div class="box box-default">
                      <div class="box-body">
                          <button type="button" class="btn btn-default pull-left" data-dismiss="modal" style="margin-right:10px;"><i class="fa fa-backward"></i> &nbsp;Abbrechen</button>
-                         <button type="button" class="btn btn-primary pull-left" data-dismiss="modal"><i class="fa fa-fast-forward"></i> &nbsp;Weiter</button>
+                         <button type="button" class="btn btn-green pull-left" data-dismiss="modal"><i class="fa fa-fast-forward"></i> &nbsp;Weiter</button>
                         <button type="button" class="btn btn-primary pull-right"><i class="fa fa fa-save"></i>&nbsp; Speichern</button>
                         <button type="button" class="btn btn-default pull-right" style="margin-right:15px;"><i class="fa fa fa-close"></i>&nbsp; Abbrechen</button>
                     </div>
@@ -452,7 +464,7 @@
         <div class="col-md-6">
         <!-- general form elements -->
         <!-- Form Element sizes -->
-        <div class="box box-success">
+        <div class="box box-gray">
             <div class="box-header with-border">
                 <h3 class="box-title">Anschrift</h3>
             </div>
@@ -498,7 +510,7 @@
         </div>
         <!-- /.box -->
         
-        <div class="box box-danger">
+        <div class="box box-gray">
         <div class="box-header with-border">
         <h3 class="box-title">Privat</h3>
         </div>
@@ -552,7 +564,7 @@
         </div>
         <!-- /.box -->
         
-        <div class="box box-primary">
+        <div class="box box-gray">
             <div class="box-header with-border">
             <h3 class="box-title">Klassen*</h3>
             </div>
@@ -560,7 +572,7 @@
         <form class="form-horizontal">
             <div class="box-body">
                  <input type="text"  class="form-control"> <br/>
-                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default">
                 <i class="fa fa-list-ul"></i> Klassenauswahl
                 </button>
             </div>
@@ -573,7 +585,7 @@
         <!-- right column -->
         <div class="col-md-6">
         <!-- Horizontal Form -->
-        <div class="box box-info">
+        <div class="box box-gray">
             <div class="box-header with-border">
                 <h3 class="box-title">Bild</h3>
             </div>
@@ -586,7 +598,7 @@
             </form>
         </div><!-- /box box-info -->
         
-        <div class="box box-danger">
+        <div class="box box-gray">
             <div class="box-header with-border">
                 <h3 class="box-title">Notiz</h3>
             </div>
@@ -602,7 +614,7 @@
         <!-- /.box -->
         
         <!-- general form elements disabled -->
-        <div class="box box-warning">
+        <div class="box box-gray">
             <div class="box-header with-border">
                 <h3 class="box-title">Kontaktdaten</h3>
             </div>
@@ -639,10 +651,10 @@
                 <label>Bundesland</label>
                 <input type="text" class="form-control" >
             </div>
-            <div class="form-group">
-                <input type="checkbox"  >&nbsp;<label>von Organisation übernehmen </label>
+ 
+            <div class="form-group" style="margin-bottom:0">
+                   <input type="checkbox" class="flat-red" checked>&nbsp;<label>von Organisation übernehmen </div>
             
-            </div>
             <div class="form-group">
                 <label>Telefon</label>
                 <input type="text" class="form-control" >
@@ -655,9 +667,9 @@
                 <label>E-Mail</label>
                 <input type="text" class="form-control" >
             </div>
-            <div class="form-group">
-                <input type="checkbox"  >&nbsp;<label>von Organisation übernehmen </label>
-             </div>
+            
+             <div class="form-group" style="margin-bottom:0">
+                   <input type="checkbox" class="flat-red" checked>&nbsp;<label>von Organisation übernehmen </div>
         </form>
         </div>
         <!-- /.box-body -->
@@ -665,7 +677,7 @@
         <!-- /.box -->
         
         <!-- Input addon -->
-        <div class="box box-info">
+        <div class="box box-gray">
             <div class="box-header with-border">
                 <h3 class="box-title">Fahrzeuge ( * = Auswahl )</h3>
             </div>
@@ -676,14 +688,28 @@
         </div>
         <!-- /.box -->
         
-        <div class="box box-success">
+        <div class="box box-gray">
             <div class="box-header with-border">
                 <h3 class="box-title">Filialen</h3>
             </div>
             <div class="box-body">
-                <input type="checkbox"  >&nbsp;<label>Fahrschule Mentor George Sood </label><br/>
-                <input type="checkbox"  >&nbsp;<label>INS 2 </label>
-            </div>
+            
+            <div class="form-group">
+                <label>
+                  <input type="checkbox" class="flat-red" checked>
+                  Flat green skin checkbox
+                </label>
+               </div>
+               <div class="form-group">
+                <label>
+                  <input type="checkbox" class="flat-red" checked>
+                  INS 2 
+                </label>
+               </div>
+            
+             
+             	 
+             </div>
         <!-- /.box-body -->
         </div>
         <!-- /.box -->
@@ -713,7 +739,7 @@
                   <div class="box box-default">
                      <div class="box-body">
                          <button type="button" class="btn btn-default pull-left" data-dismiss="modal" style="margin-right:10px;"><i class="fa fa-backward"></i> &nbsp;Abbrechen</button>
-                         <button type="button" class="btn btn-primary pull-left" data-dismiss="modal"><i class="fa fa-fast-forward"></i> &nbsp;Weiter</button>
+                         <button type="button" class="btn btn-green pull-left" data-dismiss="modal"><i class="fa fa-fast-forward"></i> &nbsp;Weiter</button>
                         <button type="button" class="btn btn-primary pull-right"><i class="fa fa fa-save"></i>&nbsp; Speichern</button>
                         <button type="button" class="btn btn-default pull-right" style="margin-right:15px;"><i class="fa fa fa-close"></i>&nbsp; Abbrechen</button>
                     </div>
@@ -729,7 +755,7 @@
         <div class="col-md-6">
         <!-- general form elements -->
         <!-- Form Element sizes -->
-        <div class="box box-success">
+        <div class="box box-gray">
             <div class="box-header with-border">
                 <h3 class="box-title">Anschrift</h3>
             </div>
@@ -772,7 +798,7 @@
         </div>
         <!-- /.box -->
         
-        <div class="box box-danger">
+        <div class="box box-gray">
         <div class="box-header with-border">
         <h3 class="box-title">Einstellungsdatum und Urlaub</h3>
         </div>
@@ -804,7 +830,7 @@
         </div>
         <!-- /.box -->
         
-        <div class="box box-primary">
+        <div class="box box-gray">
             <div class="box-header with-border">
                 <h3 class="box-title">Weitere Tätigkeiten</h3>
             </div>
@@ -819,7 +845,7 @@
          </div>
          
          
-                 <div class="box box-warning">
+                 <div class="box box-gray">
         <div class="box-header with-border">
         <h3 class="box-title">Bankverbindung</h3>
         </div>
@@ -860,7 +886,7 @@
         <!-- right column -->
         <div class="col-md-6">
         <!-- Horizontal Form -->
-       <div class="box box-info">
+       <div class="box box-gray">
         <div class="box-header with-border">
         <h3 class="box-title">Bankverbindung</h3>
         </div>
@@ -955,7 +981,7 @@
                           <div class="box box-default">
                              <div class="box-body">
                                  <button type="button" class="btn btn-default pull-left" data-dismiss="modal" style="margin-right:10px;"><i class="fa fa-backward"></i> &nbsp;Abbrechen</button>
-                                 <button type="button" class="btn btn-primary pull-left" data-dismiss="modal"><i class="fa fa-fast-forward"></i> &nbsp;Weiter</button>
+                                 <button type="button" class="btn btn-green pull-left" data-dismiss="modal"><i class="fa fa-fast-forward"></i> &nbsp;Weiter</button>
                                 <button type="button" class="btn btn-primary pull-right"><i class="fa fa fa-save"></i>&nbsp; Speichern</button>
                                 <button type="button" class="btn btn-default pull-right" style="margin-right:15px;"><i class="fa fa fa-close"></i>&nbsp; Abbrechen</button>
                             </div>
@@ -974,7 +1000,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <table id="example2" class="table table-bordered table-striped table-hover">
+              <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
                   <th width="98">Bild</th>
@@ -1028,7 +1054,7 @@
                 <h4 class="modal-title">Klassenauswahl</h4>
               </div>
               <div class="modal-body scroll" >
-                 <table id="example2" class="table table-bordered table-striped table-hover " >
+                 <table id="example2" class="table table-bordered table-hover " >
                 <thead>
                 <tr>
                   <th width="51"><input type="checkbox"/></th>
@@ -1303,13 +1329,97 @@
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Select2 -->
+<script src="../../bower_components/select2/dist/js/select2.full.min.js"></script>
+<!-- InputMask -->
+<script src="../../plugins/input-mask/jquery.inputmask.js"></script>
+<script src="../../plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="../../plugins/input-mask/jquery.inputmask.extensions.js"></script>
+<!-- date-range-picker -->
+<script src="../../bower_components/moment/min/moment.min.js"></script>
+<script src="../../bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- bootstrap datepicker -->
+<script src="../../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<!-- bootstrap color picker -->
+<script src="../../bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+<!-- bootstrap time picker -->
+<script src="../../plugins/timepicker/bootstrap-timepicker.min.js"></script>
+<!-- SlimScroll -->
+<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- iCheck 1.0.1 -->
+<script src="../../plugins/iCheck/icheck.min.js"></script>
 <!-- FastClick -->
 <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
+<script>
+  $(function () {
+    //Initialize Select2 Elements
+    $('.select2').select2()
 
-<script src="../../custom/js/demo.js"></script>
+    //Datemask dd/mm/yyyy
+    $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+    //Datemask2 mm/dd/yyyy
+    $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+    //Money Euro
+    $('[data-mask]').inputmask()
+
+    //Date range picker
+    $('#reservation').daterangepicker()
+    //Date range picker with time picker
+    $('#reservationtime').daterangepicker({ timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A' })
+    //Date range as a button
+    $('#daterange-btn').daterangepicker(
+      {
+        ranges   : {
+          'Today'       : [moment(), moment()],
+          'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          'This Month'  : [moment().startOf('month'), moment().endOf('month')],
+          'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        },
+        startDate: moment().subtract(29, 'days'),
+        endDate  : moment()
+      },
+      function (start, end) {
+        $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
+      }
+    )
+
+    //Date picker
+    $('#datepicker').datepicker({
+      autoclose: true
+    })
+
+    //iCheck for checkbox and radio inputs
+    $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+      checkboxClass: 'icheckbox_minimal-blue',
+      radioClass   : 'iradio_minimal-blue'
+    })
+    //Red color scheme for iCheck
+    $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+      checkboxClass: 'icheckbox_minimal-red',
+      radioClass   : 'iradio_minimal-red'
+    })
+    //Flat red color scheme for iCheck
+    $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+      checkboxClass: 'icheckbox_flat-green',
+      radioClass   : 'iradio_flat-green'
+    })
+
+    //Colorpicker
+    $('.my-colorpicker1').colorpicker()
+    //color picker with addon
+    $('.my-colorpicker2').colorpicker()
+
+    //Timepicker
+    $('.timepicker').timepicker({
+      showInputs: false
+    })
+  })
+</script>
 </body>
 </html>

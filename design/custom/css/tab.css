@@ -4,7 +4,7 @@
 .content-quality{float:left;width:193px;}
 .content-quality p{margin-left:10px;font-size:14px;font-weight:600;line-height:17px;}
 .content-quality p span{display:block;}
-.tabtop li a{font-weight:700;color:#1b2834;border-radius:0px; border:1px solid #ebebeb !important;}
+.tabtop li a{font-weight:700;color:#1b2834;border-radius:0px; border:1px solid #ebebeb !important; background:#fff}
 .tabtop .active a:before{position:absolute;top:15px;left:82px;color:#ba68c8;font-size:30px;}
 .tabtop li a:hover{color:#ba68c8 !important;text-decoration:none;}
 .tabtop .active a:hover{color:#fff !important;}
