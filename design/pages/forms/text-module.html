@@ -26,15 +26,28 @@
   <link rel="stylesheet" href="../../bower_components/select2/dist/css/select2.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+  <!--custom -->
+  <link rel="stylesheet" href="../../custom/css/custom.css">
+    
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
-    <!--custom -->
-  <link rel="stylesheet" href="../../custom/css/custom.css">
-
-  
-    <link rel="stylesheet" href="../../custom/css/tab.css">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+        // Add minus icon for collapse element which is open by default
+        $(".collapse.in").each(function(){
+        	$(this).siblings(".panel-heading").find(".fa").addClass("fa-arrow-circle-down").removeClass("fa-arrow-circle-right");
+        });
+        
+        // Toggle plus minus icon on show hide of collapse element
+        $(".collapse").on('show.bs.collapse', function(){
+        	$(this).parent().find(".fa").removeClass("fa-arrow-circle-right").addClass("fa-arrow-circle-down");
+        }).on('hide.bs.collapse', function(){
+        	$(this).parent().find(".fa").removeClass("fa-arrow-circle-down").addClass("fa-arrow-circle-right");
+        });
+    });
+</script>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -43,6 +56,10 @@
   <![endif]-->
 
   <!-- Google Font -->
+<style>
+.icheckbox_flat-green{ margin-top:-4px;}
+</style> 
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -326,260 +343,280 @@
     </section>
     <!-- /.sidebar -->
   </aside>
-  
-  
-  
-   <!-- Content Wrapper. Contains page content -->
+
+  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-  
- 
-<!--home-content-top starts from here-->
-<section class="home-content-top">
-     <!--our-quality-shadow-->
-      <div class="tabbable-panel margin-tops4 ">
-      <div class="tabbable-line">
-        <ul class="nav nav-tabs tabtop  tabsetting">
-          <li class="active "> <a href="#tab_default_1" data-toggle="tab">Landmeister</a> </li>
-          <li> <a href="#tab_default_2" data-toggle="tab">Bereichsmeister</a> </li>
-          <li> <a href="#tab_default_3" data-toggle="tab">Postleitzahl</a> </li>
-          </ul>
-        <div class="tab-content margin-tops">
-          <div class="tab-pane active fade in" id="tab_default_1">
-             
-         <section class="content-header">
-            <h1>Landmeister</h1>
-            <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i>Heimisch</a></li>
-                <li class="active">Landmeister</li>
-            </ol>
-        </section>
-       
-       <section class="content-header">
-            <div class="row">
-                <div class="col-xs-12">
-                  <div class="box box-default">
-                     <div class="box-body">
-                         <a href="country-add.html"><button type="button" class="btn btn-green pull-right"><i class="fa fa-plus"></i>&nbsp; Hinzufügen</button></a>
-                        <a href="country-edit.html"><button type="button" class="btn btn-primary pull-right" style="margin-right:15px;"><i class="fa fa-eye"></i>&nbsp; Aussicht</button></a>
-                    </div>
-                  </div>
-                </div>
-            </div>
-     </section>
-
-    <!-- Main content -->
-    <section class="content">
-        <div class="row">
-        <!--/.col (left) -->
-        <!-- right column -->
-            <div class="col-md-12">
-            <!-- general form elements disabled -->
-                    <div class="box box-gray">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">Landmeister</h3>
-                        </div>
-                    <!-- /.box-header -->
-                        <div class="box-body">
-                            <p>Land - Germany</p>
-                             <p>Land- India</p>   
-                        </div>
-                    <!-- /.box-body -->
-                    </div>
-            <!-- /.box -->
-             </div>
-        <!--/.col -->
-        </div>
-    <!-- /.row -->
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Textbausteine
+       </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i>Heimisch</a></li>
+         <li class="active">Textbausteine</li>
+      </ol>
     </section>
-    <!-- /.content -->
-         
-          </div><!--tab_default_1 -->
-          
-          
-    <div class="tab-pane fade" id="tab_default_2">
-      
-      <section class="content-header">
-            <h1>Bereichsmeister</h1>
-            <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i>Heimisch</a></li>
-                <li class="active">Bereichsmeister</li>
-            </ol>
-        </section>
-       
-       <section class="content-header">
-            <div class="row">
-                <div class="col-xs-12">
-                  <div class="box box-default">
-                     <div class="box-body">
-                         <a href="area-add.html"><button type="button" class="btn btn-green pull-right"><i class="fa fa-plus"></i>&nbsp; Hinzufügen</button></a>
-                        <a href="area-edit.html"><button type="button" class="btn btn-primary pull-right" style="margin-right:15px;"><i class="fa fa-eye"></i>&nbsp; Aussicht</button></a>
-                    </div>
-                  </div>
-                </div>
+    
+    <section class="content-header">
+    	<div class="row">
+        <div class="col-xs-12">
+          <div class="box box-default">
+             <div class="box-body">
+  				<button type="button" class="btn btn-primary pull-right"><i class="fa fa fa-save"></i>&nbsp; Speichern</button>
+                <button type="button" class="btn btn-default pull-right" style="margin-right:15px;"><i class="fa fa fa-close"></i>&nbsp; Abbrechen</button>
             </div>
-     </section>
-
-    <!-- Main content -->
-    <section class="content">
-        <div class="row">
-        <!--/.col (left) -->
-        <!-- right column -->
-            <div class="col-md-12">
-            <!-- general form elements disabled -->
-                    <div class="box box-gray">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">Bereichsmeister</h3>
-                        </div>
-                    <!-- /.box-header -->
-                        <div class="box-body">
-                            <p>Bereich - Germany</p>
-                             <p>Bereich - Chennai</p>   
-                        </div>
-                    <!-- /.box-body -->
-                    </div>
-            <!-- /.box -->
-             </div>
-        <!--/.col -->
-        </div>
-    <!-- /.row -->
-    </section>
-    <!-- /.content -->
-               </div><!--tab_default_2 -->
-           
-          <div class="tab-pane fade" id="tab_default_3">
-                 <section class="content-header">
-            <h1>Postleitzahl</h1>
-            <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i>Heimisch</a></li>
-                <li class="active">Postleitzahl</li>
-            </ol>
-        </section>
-       
-       <section class="content-header">
-            <div class="row">
-                <div class="col-xs-12">
-                  <div class="box box-default">
-                     <div class="box-body">
-                         <a href="postal-code-add.html"><button type="button" class="btn btn-green pull-right"><i class="fa fa-plus"></i>&nbsp; Hinzufügen</button></a>
-                        <a href="postal-code-edit.html"><button type="button" class="btn btn-primary pull-right" style="margin-right:15px;"><i class="fa fa-eye"></i>&nbsp; Aussicht</button></a>
-                    </div>
-                  </div>
-                </div>
-            </div>
-     </section>
-
-    <!-- Main content -->
-    <section class="content">
-        <div class="row">
-        <!--/.col (left) -->
-        <!-- right column -->
-            <div class="col-md-12">
-            <!-- general form elements disabled -->
-                    <div class="box box-gray">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">Postleitzahl</h3>
-                        </div>
-                    <!-- /.box-header -->
-                        <div class="box-body">
-                            <p>Postleitzahl - Germany</p>
-                             <p>Postleitzahl - India</p>   
-                        </div>
-                    <!-- /.box-body -->
-                    </div>
-            <!-- /.box -->
-             </div>
-        <!--/.col -->
-        </div>
-    <!-- /.row -->
-    </section>
-    <!-- /.content -->
-        </div>
-           
+          </div>
         </div>
       </div>
-    </div>
- </section>
-<!--home-content-top ends here--> 
- 
-    
+     </section>
 
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <!-- left column -->
+ 			<div class="col-sm-12">
+            	<div class="box box-primary box-body">
+                 <!-- -->
+                 <div class="bs-example">
+                    <div class="panel-group" id="accordion">
+                    <div class="panel text_module">
+                        <div class="row">
+                            <div class="panel-heading col-sm-9 col-xs-8">
+                                <h4 class="panel-title">
+                                 <i class="fa fa-arrow-circle-right"></i> Kopf- / Fußzeile 
+                                </h4>
+                            </div>
+                            <div class="col-sm-3 col-xs-4">
+                            		<div class="file-upload">
+                                        <label for="upload" class="file-upload__label"><i class="fa fa-upload"></i> </label>
+                                        <input id="upload" class="file-upload__input" type="file" name="file-upload">
+                                    </div>
+                                <div class="form-group" style="margin-bottom:0; display:inline">
+                                    <input type="checkbox" class="flat-red" checked>
+                                </div>
+                           </div>
+                        </div>
+                    
+                        <div id="collapseOne" class="panel-collapse collapse">
+                            <div class="panel-body">
+                             </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div class="panel text_module">
+                        <div class="row">
+                            <div class="panel-heading col-sm-9 col-xs-8">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapsetwo"><i class="fa fa-arrow-circle-right"></i> Ausbildungsvertrag</a>
+                                </h4>
+                            </div>
+                            <div class="col-sm-3 col-xs-4">
+                            	<a class="btn btn-primary m-r"><i class="fa fa-toggle-down"></i></a>
+                            	<div class="form-group" style="margin-bottom:0; display:inline">
+                   					<input type="checkbox" class="flat-red" checked></div>
+                            </div>
+                        </div>
+                    
+                        <div id="collapsetwo" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                    <div class="box-header">
+                                   		 <h3 class="box-title text-black "><small>Vertragsbedingungen</small></h3>
+                                     </div>
+                                    <!-- /.box-header -->
+                                        <div class="box-body pad">
+                                            <form>
+                                                <textarea id="editor1" name="editor1" rows="10" cols="80">
+                                                 This is my textarea to be replaced with CKEditor.
+                                                </textarea>
+                                            </form>
+                                        </div>
+                                    </div>
+                             </div>
+                        </div>
+                    </div><!--panel -->
+                    
+                    <div class="panel text_module">
+                        <div class="row">
+                            <div class="panel-heading col-sm-9 col-xs-8">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapsethree"><i class="fa fa-arrow-circle-right"></i>Rechnung</a>
+                                </h4>
+                            </div>
+                            <div class="col-sm-3 col-xs-4">
+                            	<div class="file-upload">
+                                        <label for="upload" class="file-upload__label"><i class="fa fa-upload"></i> </label>
+                                        <input id="upload" class="file-upload__input" type="file" name="file-upload">
+                                    </div>
+                            	<i class="fa fa-file-pdf-o"></i>
+                            	<div class="form-group" style="margin-bottom:0; display:inline">
+                   					<input type="checkbox" class="flat-red" checked></div>
+                            </div>
+                        </div>
+                    
+                        <div id="collapsethree" class="panel-collapse collapse">
+                            <div class="panel-body">
+                            	  
+                                    <!-- /.box-header -->
+                                        <div class="box-body">
+                                            <form>
+                                               <div class="row">
+                                                    <div class="col-xs-6">
+                                                        <div class="form-group">
+                                                       <label>Daten 1</label>
+                                                         <textarea class="form-control" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <div class="form-group">
+                                                        <label>Daten 2</label>
+                                                         <textarea class="form-control" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div><!--row -->
+                                                    
+                                            </form>
+                                        </div>
+                             </div>
+                        </div>
+                    </div><!--panel -->
+                    
+                    
+                    
+                    <div class="panel text_module">
+                        <div class="row">
+                            <div class="panel-heading col-sm-9 col-xs-8">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapsefour"><i class="fa fa-arrow-circle-right"></i>Mahnung 1</a>
+                                </h4>
+                            </div>
+                            <div class="col-sm-3 col-xs-4">
+                             	<div class="form-group" style="margin-bottom:0; display:inline">
+                   					<input type="checkbox" class="flat-red" checked></div>
+                            </div>
+                        </div>
+                    
+                        <div id="collapsefour" class="panel-collapse collapse">
+                            <div class="panel-body">
+                            	<div class="box-header">
+                                   		 <h3 class="box-title text-black "><small>Vertragsbedingungen</small></h3>
+                                     </div>
+                                    <!-- /.box-header -->
+                                        <div class="box-body">
+                                             <form>
+                                               <div class="row">
+                                                    <div class="col-xs-6">
+                                                        <div class="form-group">
+                                                       <label>Daten 1</label>
+                                                         <textarea class="form-control" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <div class="form-group">
+                                                        <label>Daten 2</label>
+                                                         <textarea class="form-control" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div><!--row -->
+                                                    
+                                            </form>
+                                        </div>
+                             </div>
+                        </div>
+                    </div><!--panel -->
+                    
+                    <div class="panel text_module">
+                        <div class="row">
+                            <div class="panel-heading col-sm-9 col-xs-8">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapsefive"><i class="fa fa-arrow-circle-right"></i>Mahnung 2</a>
+                                </h4>
+                            </div>
+                            <div class="col-sm-3 col-xs-4">
+                                     <div class="form-group" style="margin-bottom:0; display:inline">
+                   					<input type="checkbox" class="flat-red" checked></div>
+                            </div>
+                        </div>
+                    
+                        <div id="collapsefive" class="panel-collapse collapse">
+                            <div class="panel-body">
+                            	<div class="box-header">
+                                   		 <h3 class="box-title text-black "><small>Vertragsbedingungen</small></h3>
+                                     </div>
+                                    <!-- /.box-header -->
+                                        <div class="box-body pad">
+                                            <form>
+                                               <div class="row">
+                                                    <div class="col-xs-6">
+                                                        <div class="form-group">
+                                                       <label>Daten 1</label>
+                                                         <textarea class="form-control" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <div class="form-group">
+                                                        <label>Daten 2</label>
+                                                         <textarea class="form-control" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div><!--row -->
+                                                    
+                                            </form>
+                                        </div>
+                             </div>
+                        </div>
+                    </div><!--panel -->
+                    
+                     <div class="panel text_module">
+                        <div class="row">
+                            <div class="panel-heading col-sm-9 col-xs-8">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapsesix"><i class="fa fa-arrow-circle-right"></i>Preisliste</a>
+                                </h4>
+                            </div>
+                            <div class="col-sm-3 col-xs-4">
+                            	<a class="btn btn-primary m-r"><i class="fa fa-toggle-down"></i></a>
+                            	<i class="fa fa-file-pdf-o"></i>
+                            	<div class="form-group" style="margin-bottom:0;  display:inline">
+                   					<input type="checkbox" class="flat-red" checked></div>
+                            </div>
+                        </div>
+                    
+                        <div id="collapsesix" class="panel-collapse collapse">
+                            <div class="panel-body">
+                            	<div class="row">
+                                          <form>
+                                               <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="form-group">
+                                                       <label>Daten 1</label>
+                                                         <textarea class="form-control" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div><!--row -->
+                                                    
+                                            </form>
+                                             
+                                        </div>
+                                        
+                                        </div>
+                                </div>
+                             </div>
+                        </div>
+                    </div><!--panel -->
+                     </div>
+                    </div><!-- -->
+                     </div>
+                 <!-- -->
+        	 </div>
+        <!--/.col (right) -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
   </div>
-  
    
-     <div class="modal fade" id="modal-default">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Klassenauswahl</h4>
-              </div>
-              <div class="modal-body scroll" >
-                 <table id="example2" class="table table-bordered table-hover " >
-                <thead>
-                <tr>
-                  <th width="51"><input type="checkbox"/></th>
-                  <th width="89">Surname	</th>
-                  <th width="180">designation</th>
-                  <th width="121"><select class="form-control">
-                    <option>VAT.</option>
-                    <option>VAT.</option>
-                    <option>option 3</option>
-                    <option>option 4</option>
-                    <option>option 5</option>
-                  </select></th>
-                  <th width="607">description</th>
-                </tr>
-                </thead>
-                <tbody>
-                
-                <tr>
-                  <td><input type="checkbox"/></td>
-                  <td>A</td>
-                  <td>KRAD over 50 ccm</td>
-                  <td>Full</td>
-                  <td>(a) Motorcycles (including wagon) with a displacement exceeding <br>
-                  50 cm³ and a hp of more than 45 km / h. (b) Three-wheeled motor vehicles of an output exceeding 15 kW.</td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"/></td>
-                  <td>A</td>
-                  <td>KRAD over 50 ccm</td>
-                  <td>Full</td>
-                  <td>(a) Motorcycles (including wagon) with a displacement exceeding <br>
-                    50 cm³ and a hp of more than 45 km / h. (b) Three-wheeled motor vehicles of an output exceeding 15 kW.</td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"/></td>
-                  <td>A</td>
-                  <td>KRAD over 50 ccm</td>
-                  <td>Full</td>
-                  <td>(a) Motorcycles (including wagon) with a displacement exceeding <br>
-                    50 cm³ and a hp of more than 45 km / h. (b) Three-wheeled motor vehicles of an output exceeding 15 kW.</td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"/></td>
-                  <td>A</td>
-                  <td>KRAD over 50 ccm</td>
-                  <td>Full</td>
-                  <td>(a) Motorcycles (including wagon) with a displacement exceeding <br>
-                    50 cm³ and a hp of more than 45 km / h. (b) Three-wheeled motor vehicles of an output exceeding 15 kW.</td>
-                </tr>
-                </tbody>
-                <tfoot>
-                </tfoot>
-              </table>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Abbrechen</button>
-                <button type="button" class="btn btn-primary">Ok</button>
-              </div>
-            </div>
-            <!-- /.modal-content -->
-          </div>
-          <!-- /.modal-dialog -->
-        </div>
-        <!-- /.modal -->
   
   <!-- /.content-wrapper -->
   <footer class="main-footer">
@@ -814,6 +851,49 @@
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
+
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+ <script src="../../bower_components/ckeditor/ckeditor.js"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<script>
+  $(function () {
+    // Replace the <textarea id="editor1"> with a CKEditor
+    // instance, using default configuration.
+    CKEDITOR.replace('editor1')
+    //bootstrap WYSIHTML5 - text editor
+    $('.textarea').wysihtml5()
+  })
+  $(function () {
+    // Replace the <textarea id="editor1"> with a CKEditor
+    // instance, using default configuration.
+    CKEDITOR.replace('editor2')
+    //bootstrap WYSIHTML5 - text editor
+    $('.textarea').wysihtml5()
+  })
+  $(function () {
+    // Replace the <textarea id="editor1"> with a CKEditor
+    // instance, using default configuration.
+    CKEDITOR.replace('editor3')
+    //bootstrap WYSIHTML5 - text editor
+    $('.textarea').wysihtml5()
+  })
+  $(function () {
+    // Replace the <textarea id="editor1"> with a CKEditor
+    // instance, using default configuration.
+    CKEDITOR.replace('editor4')
+    //bootstrap WYSIHTML5 - text editor
+    $('.textarea').wysihtml5()
+  })
+   $(function () {
+    // Replace the <textarea id="editor1"> with a CKEditor
+    // instance, using default configuration.
+    CKEDITOR.replace('editor5')
+    //bootstrap WYSIHTML5 - text editor
+    $('.textarea').wysihtml5()
+  })
+</script>
 <script>
   $(function () {
     //Initialize Select2 Elements

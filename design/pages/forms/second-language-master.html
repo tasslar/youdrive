@@ -12,28 +12,15 @@
   <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
-  <!-- daterange picker -->
-  <link rel="stylesheet" href="../../bower_components/bootstrap-daterangepicker/daterangepicker.css">
-  <!-- bootstrap datepicker -->
-  <link rel="stylesheet" href="../../bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
-  <!-- iCheck for checkboxes and radio inputs -->
-  <link rel="stylesheet" href="../../plugins/iCheck/all.css">
-  <!-- Bootstrap Color Picker -->
-  <link rel="stylesheet" href="../../bower_components/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
-  <!-- Bootstrap time Picker -->
-  <link rel="stylesheet" href="../../plugins/timepicker/bootstrap-timepicker.min.css">
-  <!-- Select2 -->
-  <link rel="stylesheet" href="../../bower_components/select2/dist/css/select2.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+  
     <!--custom -->
   <link rel="stylesheet" href="../../custom/css/custom.css">
 
-  
-    <link rel="stylesheet" href="../../custom/css/tab.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -329,257 +316,87 @@
   
   
   
-   <!-- Content Wrapper. Contains page content -->
+  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-  
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+       Sprache hinzufügen
+       </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i>Heimisch</a></li>
+         <li class="active">Sprache hinzufügen</li>
+      </ol>
+    </section>
  
-<!--home-content-top starts from here-->
-<section class="home-content-top">
-     <!--our-quality-shadow-->
-      <div class="tabbable-panel margin-tops4 ">
-      <div class="tabbable-line">
-        <ul class="nav nav-tabs tabtop  tabsetting">
-          <li class="active "> <a href="#tab_default_1" data-toggle="tab">Landmeister</a> </li>
-          <li> <a href="#tab_default_2" data-toggle="tab">Bereichsmeister</a> </li>
-          <li> <a href="#tab_default_3" data-toggle="tab">Postleitzahl</a> </li>
-          </ul>
-        <div class="tab-content margin-tops">
-          <div class="tab-pane active fade in" id="tab_default_1">
-             
-         <section class="content-header">
-            <h1>Landmeister</h1>
-            <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i>Heimisch</a></li>
-                <li class="active">Landmeister</li>
-            </ol>
-        </section>
-       
-       <section class="content-header">
-            <div class="row">
-                <div class="col-xs-12">
-                  <div class="box box-default">
-                     <div class="box-body">
-                         <a href="country-add.html"><button type="button" class="btn btn-green pull-right"><i class="fa fa-plus"></i>&nbsp; Hinzufügen</button></a>
-                        <a href="country-edit.html"><button type="button" class="btn btn-primary pull-right" style="margin-right:15px;"><i class="fa fa-eye"></i>&nbsp; Aussicht</button></a>
-                    </div>
-                  </div>
-                </div>
-            </div>
-     </section>
 
     <!-- Main content -->
     <section class="content">
-        <div class="row">
-        <!--/.col (left) -->
-        <!-- right column -->
-            <div class="col-md-12">
-            <!-- general form elements disabled -->
-                    <div class="box box-gray">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">Landmeister</h3>
-                        </div>
-                    <!-- /.box-header -->
-                        <div class="box-body">
-                            <p>Land - Germany</p>
-                             <p>Land- India</p>   
-                        </div>
-                    <!-- /.box-body -->
-                    </div>
-            <!-- /.box -->
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-12">
+          <!-- general form elements -->
+          <div class="box box-default">
+            <div class="box-header">
              </div>
-        <!--/.col -->
-        </div>
-    <!-- /.row -->
-    </section>
-    <!-- /.content -->
-         
-          </div><!--tab_default_1 -->
-          
-          
-    <div class="tab-pane fade" id="tab_default_2">
+            <!-- /.box-header -->
+             <form role="form">
+              <div class="box-body">
+                  <div class="row">
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                        <label>ID Nr</label>
+                        <input type="text" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                        <label>Sprache Name</label>
+                        <input type="text" class="form-control" >
+                        </div>
+                    </div>
+                </div><!--row -->
+                
+                 <div class="row">
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                        <label>Sprachcode</label>
+                        <input type="text" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                        <label>URL markieren</label>
+                        <input type="text" class="form-control" >
+                        </div>
+                    </div>
+                </div><!--row -->
       
-      <section class="content-header">
-            <h1>Bereichsmeister</h1>
-            <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i>Heimisch</a></li>
-                <li class="active">Bereichsmeister</li>
-            </ol>
-        </section>
-       
-       <section class="content-header">
-            <div class="row">
-                <div class="col-xs-12">
-                  <div class="box box-default">
-                     <div class="box-body">
-                         <a href="area-add.html"><button type="button" class="btn btn-green pull-right"><i class="fa fa-plus"></i>&nbsp; Hinzufügen</button></a>
-                        <a href="area-edit.html"><button type="button" class="btn btn-primary pull-right" style="margin-right:15px;"><i class="fa fa-eye"></i>&nbsp; Aussicht</button></a>
-                    </div>
-                  </div>
-                </div>
-            </div>
-     </section>
+                <br/>
+                <div class="row">
+                	<div class=" col-sm-offset-5 col-sm-8 col-md-4 col-xs-offset-0 col-xs-12">
+                         <button type="button" class="btn btn-default" style="margin-right:15px;"><i class="fa fa fa-close"></i>&nbsp; Stornieren</button>
+                        <button type="button" class="btn btn-primary"><i class="fa fa fa-save"></i>&nbsp; erretten</button>
+                        </div>
+                 </div>
+                 
+                <br/>
+              </div>
+            </form>
+          </div>
+          <!-- /.box -->
 
-    <!-- Main content -->
-    <section class="content">
-        <div class="row">
-        <!--/.col (left) -->
-        <!-- right column -->
-            <div class="col-md-12">
-            <!-- general form elements disabled -->
-                    <div class="box box-gray">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">Bereichsmeister</h3>
-                        </div>
-                    <!-- /.box-header -->
-                        <div class="box-body">
-                            <p>Bereich - Germany</p>
-                             <p>Bereich - Chennai</p>   
-                        </div>
-                    <!-- /.box-body -->
-                    </div>
-            <!-- /.box -->
-             </div>
-        <!--/.col -->
-        </div>
-    <!-- /.row -->
-    </section>
-    <!-- /.content -->
-               </div><!--tab_default_2 -->
-           
-          <div class="tab-pane fade" id="tab_default_3">
-                 <section class="content-header">
-            <h1>Postleitzahl</h1>
-            <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i>Heimisch</a></li>
-                <li class="active">Postleitzahl</li>
-            </ol>
-        </section>
-       
-       <section class="content-header">
-            <div class="row">
-                <div class="col-xs-12">
-                  <div class="box box-default">
-                     <div class="box-body">
-                         <a href="postal-code-add.html"><button type="button" class="btn btn-green pull-right"><i class="fa fa-plus"></i>&nbsp; Hinzufügen</button></a>
-                        <a href="postal-code-edit.html"><button type="button" class="btn btn-primary pull-right" style="margin-right:15px;"><i class="fa fa-eye"></i>&nbsp; Aussicht</button></a>
-                    </div>
-                  </div>
-                </div>
-            </div>
-     </section>
-
-    <!-- Main content -->
-    <section class="content">
-        <div class="row">
-        <!--/.col (left) -->
-        <!-- right column -->
-            <div class="col-md-12">
-            <!-- general form elements disabled -->
-                    <div class="box box-gray">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">Postleitzahl</h3>
-                        </div>
-                    <!-- /.box-header -->
-                        <div class="box-body">
-                            <p>Postleitzahl - Germany</p>
-                             <p>Postleitzahl - India</p>   
-                        </div>
-                    <!-- /.box-body -->
-                    </div>
-            <!-- /.box -->
-             </div>
-        <!--/.col -->
-        </div>
-    <!-- /.row -->
-    </section>
-    <!-- /.content -->
-        </div>
-           
-        </div>
+         </div>
+        	
+        <!--/.col (right) -->
       </div>
-    </div>
- </section>
-<!--home-content-top ends here--> 
- 
-    
-
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
   </div>
   
+ 
    
-     <div class="modal fade" id="modal-default">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Klassenauswahl</h4>
-              </div>
-              <div class="modal-body scroll" >
-                 <table id="example2" class="table table-bordered table-hover " >
-                <thead>
-                <tr>
-                  <th width="51"><input type="checkbox"/></th>
-                  <th width="89">Surname	</th>
-                  <th width="180">designation</th>
-                  <th width="121"><select class="form-control">
-                    <option>VAT.</option>
-                    <option>VAT.</option>
-                    <option>option 3</option>
-                    <option>option 4</option>
-                    <option>option 5</option>
-                  </select></th>
-                  <th width="607">description</th>
-                </tr>
-                </thead>
-                <tbody>
-                
-                <tr>
-                  <td><input type="checkbox"/></td>
-                  <td>A</td>
-                  <td>KRAD over 50 ccm</td>
-                  <td>Full</td>
-                  <td>(a) Motorcycles (including wagon) with a displacement exceeding <br>
-                  50 cm³ and a hp of more than 45 km / h. (b) Three-wheeled motor vehicles of an output exceeding 15 kW.</td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"/></td>
-                  <td>A</td>
-                  <td>KRAD over 50 ccm</td>
-                  <td>Full</td>
-                  <td>(a) Motorcycles (including wagon) with a displacement exceeding <br>
-                    50 cm³ and a hp of more than 45 km / h. (b) Three-wheeled motor vehicles of an output exceeding 15 kW.</td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"/></td>
-                  <td>A</td>
-                  <td>KRAD over 50 ccm</td>
-                  <td>Full</td>
-                  <td>(a) Motorcycles (including wagon) with a displacement exceeding <br>
-                    50 cm³ and a hp of more than 45 km / h. (b) Three-wheeled motor vehicles of an output exceeding 15 kW.</td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"/></td>
-                  <td>A</td>
-                  <td>KRAD over 50 ccm</td>
-                  <td>Full</td>
-                  <td>(a) Motorcycles (including wagon) with a displacement exceeding <br>
-                    50 cm³ and a hp of more than 45 km / h. (b) Three-wheeled motor vehicles of an output exceeding 15 kW.</td>
-                </tr>
-                </tbody>
-                <tfoot>
-                </tfoot>
-              </table>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Abbrechen</button>
-                <button type="button" class="btn btn-primary">Ok</button>
-              </div>
-            </div>
-            <!-- /.modal-content -->
-          </div>
-          <!-- /.modal-dialog -->
-        </div>
-        <!-- /.modal -->
   
   <!-- /.content-wrapper -->
   <footer class="main-footer">
@@ -789,97 +606,11 @@
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- Select2 -->
-<script src="../../bower_components/select2/dist/js/select2.full.min.js"></script>
-<!-- InputMask -->
-<script src="../../plugins/input-mask/jquery.inputmask.js"></script>
-<script src="../../plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
-<script src="../../plugins/input-mask/jquery.inputmask.extensions.js"></script>
-<!-- date-range-picker -->
-<script src="../../bower_components/moment/min/moment.min.js"></script>
-<script src="../../bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
-<!-- bootstrap datepicker -->
-<script src="../../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<!-- bootstrap color picker -->
-<script src="../../bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
-<!-- bootstrap time picker -->
-<script src="../../plugins/timepicker/bootstrap-timepicker.min.js"></script>
-<!-- SlimScroll -->
-<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- iCheck 1.0.1 -->
-<script src="../../plugins/iCheck/icheck.min.js"></script>
 <!-- FastClick -->
 <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
-<script>
-  $(function () {
-    //Initialize Select2 Elements
-    $('.select2').select2()
-
-    //Datemask dd/mm/yyyy
-    $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
-    //Datemask2 mm/dd/yyyy
-    $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
-    //Money Euro
-    $('[data-mask]').inputmask()
-
-    //Date range picker
-    $('#reservation').daterangepicker()
-    //Date range picker with time picker
-    $('#reservationtime').daterangepicker({ timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A' })
-    //Date range as a button
-    $('#daterange-btn').daterangepicker(
-      {
-        ranges   : {
-          'Today'       : [moment(), moment()],
-          'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-          'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
-          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-          'This Month'  : [moment().startOf('month'), moment().endOf('month')],
-          'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-        },
-        startDate: moment().subtract(29, 'days'),
-        endDate  : moment()
-      },
-      function (start, end) {
-        $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
-      }
-    )
-
-    //Date picker
-    $('#datepicker').datepicker({
-      autoclose: true
-    })
-
-    //iCheck for checkbox and radio inputs
-    $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
-      checkboxClass: 'icheckbox_minimal-blue',
-      radioClass   : 'iradio_minimal-blue'
-    })
-    //Red color scheme for iCheck
-    $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
-      checkboxClass: 'icheckbox_minimal-red',
-      radioClass   : 'iradio_minimal-red'
-    })
-    //Flat red color scheme for iCheck
-    $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
-      checkboxClass: 'icheckbox_flat-green',
-      radioClass   : 'iradio_flat-green'
-    })
-
-    //Colorpicker
-    $('.my-colorpicker1').colorpicker()
-    //color picker with addon
-    $('.my-colorpicker2').colorpicker()
-
-    //Timepicker
-    $('.timepicker').timepicker({
-      showInputs: false
-    })
-  })
-</script>
 </body>
 </html>
