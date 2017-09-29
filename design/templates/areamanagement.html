@@ -261,31 +261,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </a>
           <ul class="treeview-menu">
             <li class="treeview">
-              <a href="#"><i class="fa fa-circle-o text-aqua"></i> LOCATION MASTER
+              <a href="#"><i class="fa fa-circle-o text-aqua"></i> LOCATION
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> COUNTRY MANAGMENT</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> AREA MANAGMENT</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> POSTALCODE_MANAGMENT</a></li>
+                <li><a href="countrymanagement.html"><i class="fa fa-circle-o"></i> COUNTRY MANAGMENT</a></li>
+                <li><a href="areamanagement.html"><i class="fa fa-circle-o"></i> AREA MANAGMENT</a></li>
+                <li><a href="postalcodemanagement.html"><i class="fa fa-circle-o"></i> POSTALCODE_MANAGMENT</a></li>
               </ul>
             </li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-          </ul>
-        </li>
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
-        <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
-            <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="#">Link in level 2</a></li>
-            <li><a href="#">Link in level 2</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Classes</a></li>
           </ul>
         </li>
       </ul>
@@ -304,7 +291,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-book"></i> Masters</a></li>
-        <li><a href="#"><i class="fa fa-map-marker"></i> Location</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <i class="fa fa-map-marker"></i> Location
+          </a>
+          <ul class="dropdown-menu">
+            <li role="presentation"><a role="menuitem" href="countrymanagement.html"><i class="fa fa-toggle-right"></i> Country Management</a></li>
+            <li role="presentation"><a role="menuitem" href="postalcodemanagement.html"><i class="fa fa-toggle-right"></i> Postal Code Management</a></li>
+          </ul>
+        </li>
         <li class="active">Area</li>
       </ol>
     </section>
@@ -555,7 +550,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-2 control-label">Country Status</label>
+                        <label for="inputPassword3" class="col-sm-2 control-label">Area Status</label>
 
                         <div class="col-sm-6">
                           <select class="form-control">
