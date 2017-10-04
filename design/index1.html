@@ -29,6 +29,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
+  <style type="text/css">
+    .skin-blue .main-header .navbar {
+        background-color: #ba68c8 !important;
+    }
+    .skin-blue .main-header .logo {
+        background-color: #9c48aa;
+    }
+  </style>
+
   <!-- Google Font -->
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -60,7 +69,7 @@ desired effect
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="#" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>M</b>RT</span>
       <!-- logo for regular state and mobile devices -->
@@ -231,18 +240,6 @@ desired effect
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
 
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-        </div>
-        <div class="pull-left info">
-          <p>Alexander Pierce</p>
-          <!-- Status -->
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-        </div>
-      </div>
-
       <!-- search form (Optional) -->
       <form action="#" method="get" class="sidebar-form">
         <div class="input-group">
@@ -281,7 +278,40 @@ desired effect
             </li>
             <li><a href="./templates/classesmaster.html"><i class="fa fa-circle-o"></i> Classes</a></li>
             <li><a href="./templates/taxmaster.html"><i class="fa fa-circle-o"></i> Tax</a></li>
+            <li><a href="./templates/educationassignmaster.html"><i class="fa fa-circle-o"></i> EDUCATION ASSIGNMENT</a></li>
+            <li><a href="./templates/newsmaster.html"><i class="fa fa-circle-o"></i> News</a></li>
+            <li><a href="./templates/rolesmaster.html"><i class="fa fa-circle-o"></i> Roles</a></li>
+            <li><a href="./templates/educationothermaster.html"><i class="fa fa-circle-o"></i> Education Others</a></li>
+            <li><a href="./templates/servicetypemaster.html"><i class="fa fa-circle-o"></i> Service Type</a></li>
+            <li class="treeview">
+              <a href="#"><i class="fa fa-circle-o text-aqua"></i> Vehicle
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="./templates/vehicletypemaster.html"><i class="fa fa-circle-o"></i> Vehicle Type</a></li>
+                <li><a href="./templates/vehicledetailsmaster.html"><i class="fa fa-circle-o"></i> Vehicle Details</a></li>
+                <li><a href="./templates/vehiclepricegroupmaster.html"><i class="fa fa-circle-o"></i> Vehicle Price Group</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#"><i class="fa fa-circle-o text-aqua"></i> Branch
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="./templates/branchdetailsmaster.html"><i class="fa fa-circle-o"></i> Basic Information</a></li>
+                <li><a href="./templates/vehicledetailsmaster.html"><i class="fa fa-circle-o"></i> Text Modules</a></li>
+              </ul>
+            </li>
           </ul>
+          <li>
+            <a href="./templates/myaccount.html">
+              <i class="fa fa-user"></i> <span> My Account</span>
+            </a>
+          </li>
         </li>
       </ul>
       <!-- /.sidebar-menu -->

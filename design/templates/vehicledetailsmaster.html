@@ -16,6 +16,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="../bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="../bower_components/select2/dist/css/select2.min.css">
   <!-- DataTables -->
   <link rel="stylesheet" href="../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
   <!-- Theme style -->
@@ -31,6 +33,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+
+  <style type="text/css">
+    .file {
+      visibility: hidden;
+      position: absolute;
+    }
+  </style>
 
   <!-- Google Font -->
   <link rel="stylesheet"
@@ -284,12 +293,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Classes
+        Vehicle Details Management
         <small>Total Available - 35</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-book"></i> Masters</a></li>
-        <li class="active">Classes</li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <i class="fa fa-map-marker"></i> Vehicle Type
+          </a>
+          <ul class="dropdown-menu">
+            <li role="presentation"><a role="menuitem" href="countrymanagement.html"><i class="fa fa-toggle-right"></i> Vehicle Price Group</a></li>
+          </ul>
+        </li>
+        <li class="active">Vehicle Details</li>
       </ol>
     </section>
 
@@ -301,12 +318,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- Custom Tabs -->
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-              <li class="active"><a href="#tab_1" data-toggle="tab"><i class="fa fa-eye"></i> &nbsp; View All Classes</a></li>
-              <li><a href="#tab_2" data-toggle="tab"><i class="fa fa-plus"></i> &nbsp; Add New Class</a></li>
-              <li class="pull-right">
-                <a href="#">
-                  <i class="fa fa-refresh"></i>
+              <li class="active"><a href="#tab_1" data-toggle="tab"><i class="fa fa-eye"></i> &nbsp; View All Vehicles</a></li>
+              <li><a href="#tab_2" data-toggle="tab"><i class="fa fa-plus"></i> &nbsp; Add New Vehicle</a></li>
+              <li class="dropdown pull-right">
+                <a class="dropdown-toggle text-muted" data-toggle="dropdown" href="#">
+                  <i class="fa fa-gear"></i>
                 </a>
+                <ul class="dropdown-menu">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-refresh"></i> Refresh</a></li>
+                </ul>
               </li>
               <!-- <li class="pull-right"><a href="#" class="text-muted"><i class="fa fa-gear"></i></a></li> -->
             </ul>
@@ -314,218 +334,239 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="tab-pane active" id="tab_1">
                 <div class="box">
                   <div class="box-header">
-                    <h3 class="box-title">Class Details</h3>
+                    <h3 class="box-title">Vehicle Details</h3>
                   </div>
                   <!-- /.box-header -->
-                  <div class="box-body">
-                    <table id="example1" class="table table-bordered table-striped">
+                  <div class="box box-primary">
+                    <div class="box-body">
+                      <table id="example1" class="table table-bordered table-striped">
                       <thead>
                       <tr>
                         <th>S.No</th>
-                        <th>Surname</th>
-                        <th>Designation</th>
-                        <th>VAT</th>
-                        <th>Description</th>
-                        <th>Status</th>
+                        <th>Image</th>
+                        <th>Vehicle Name</th>
+                        <th>Vehicle Details</th>
+                        <th>Vehicle Status</th>
                         <th>Action</th>
                       </tr>
                       </thead>
                       <tbody>
                       <tr>
-                        <td>Trident</td>
-                        <td>Internet
-                          Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Trident</td>
-                        <td>Internet
-                          Explorer 5.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
-                        <td>5</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Trident</td>
-                        <td>Internet
-                          Explorer 5.5
-                        </td>
-                        <td>Win 95+</td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
-                        <td>5.5</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Trident</td>
-                        <td>Internet
-                          Explorer 6
-                        </td>
-                        <td>Win 98+</td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
-                        <td>6</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Trident</td>
-                        <td>Internet Explorer 7</td>
-                        <td>Win XP SP2+</td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
-                        <td>7</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Trident</td>
-                        <td>AOL browser (AOL desktop)</td>
-                        <td>Win XP</td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
-                        <td>6</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Firefox 1.0</td>
-                        <td>Win 98+ / OSX.2+</td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
-                        <td>1.7</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Firefox 1.5</td>
-                        <td>Win 98+ / OSX.2+</td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
-                        <td>1.8</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Firefox 2.0</td>
-                        <td>Win 98+ / OSX.2+</td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
-                        <td>1.8</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Firefox 3.0</td>
-                        <td>Win 2k+ / OSX.3+</td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
-                        <td>1.9</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Camino 1.0</td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
-                        <td>OSX.2+</td>
-                        <td>1.8</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Camino 1.5</td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
-                        <td>OSX.3+</td>
-                        <td>1.8</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Netscape 7.2</td>
-                        <td>Win 95+ / Mac OS 8.6-9.2</td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
-                        <td>1.7</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Netscape Browser 8</td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
-                        <td>Win 98SE+</td>
-                        <td>1.7</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Netscape Navigator 9</td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
-                        <td>Win 98+ / OSX.2+</td>
-                        <td>1.8</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Mozilla 1.0</td>
-                        <td>Win 95+ / OSX.1+</td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
                         <td>1</td>
+                        <td>
+                          <img src="http://placehold.it/150x100" alt="..." class="margin">
+                        </td>
+                        <td>  Driving School Mentor George Sood</td>
+                        <td>
+                          <h5>Manufacturer: vw </h5>
+                          <h5>Type: Car</h5>
+                          <h5>Transmission: Petrol</h5>
+                        </td>
+                        <td> Active</td>
+                        <td> 
+                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
+                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>
+                          <img src="http://placehold.it/150x100" alt="..." class="margin">
+                        </td>
+                        <td>  Driving School Mentor George Sood</td>
+                        <td>
+                          <h5>Manufacturer: vw </h5>
+                          <h5>Type: Car</h5>
+                          <h5>Transmission: Petrol</h5>
+                        </td>
+                        <td> Active</td>
+                        <td> 
+                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
+                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>
+                          <img src="http://placehold.it/150x100" alt="..." class="margin">
+                        </td>
+                        <td>  Driving School Mentor George Sood</td>
+                        <td>
+                          <h5>Manufacturer: vw </h5>
+                          <h5>Type: Car</h5>
+                          <h5>Transmission: Petrol</h5>
+                        </td>
+                        <td> Active</td>
+                        <td> 
+                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
+                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>
+                          <img src="http://placehold.it/150x100" alt="..." class="margin">
+                        </td>
+                        <td>  Driving School Mentor George Sood</td>
+                        <td>
+                          <h5>Manufacturer: vw </h5>
+                          <h5>Type: Car</h5>
+                          <h5>Transmission: Petrol</h5>
+                        </td>
+                        <td> Active</td>
+                        <td> 
+                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
+                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>
+                          <img src="http://placehold.it/150x100" alt="..." class="margin">
+                        </td>
+                        <td>  Driving School Mentor George Sood</td>
+                        <td>
+                          <h5>Manufacturer: vw </h5>
+                          <h5>Type: Car</h5>
+                          <h5>Transmission: Petrol</h5>
+                        </td>
+                        <td> Active</td>
+                        <td> 
+                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
+                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>
+                          <img src="http://placehold.it/150x100" alt="..." class="margin">
+                        </td>
+                        <td>  Driving School Mentor George Sood</td>
+                        <td>
+                          <h5>Manufacturer: vw </h5>
+                          <h5>Type: Car</h5>
+                          <h5>Transmission: Petrol</h5>
+                        </td>
+                        <td> Active</td>
+                        <td> 
+                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
+                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>
+                          <img src="http://placehold.it/150x100" alt="..." class="margin">
+                        </td>
+                        <td>  Driving School Mentor George Sood</td>
+                        <td>
+                          <h5>Manufacturer: vw </h5>
+                          <h5>Type: Car</h5>
+                          <h5>Transmission: Petrol</h5>
+                        </td>
+                        <td> Active</td>
+                        <td> 
+                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
+                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>
+                          <img src="http://placehold.it/150x100" alt="..." class="margin">
+                        </td>
+                        <td>  Driving School Mentor George Sood</td>
+                        <td>
+                          <h5>Manufacturer: vw </h5>
+                          <h5>Type: Car</h5>
+                          <h5>Transmission: Petrol</h5>
+                        </td>
+                        <td> Active</td>
+                        <td> 
+                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
+                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>
+                          <img src="http://placehold.it/150x100" alt="..." class="margin">
+                        </td>
+                        <td>  Driving School Mentor George Sood</td>
+                        <td>
+                          <h5>Manufacturer: vw </h5>
+                          <h5>Type: Car</h5>
+                          <h5>Transmission: Petrol</h5>
+                        </td>
+                        <td> Active</td>
+                        <td> 
+                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
+                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>
+                          <img src="http://placehold.it/150x100" alt="..." class="margin">
+                        </td>
+                        <td>  Driving School Mentor George Sood</td>
+                        <td>
+                          <h5>Manufacturer: vw </h5>
+                          <h5>Type: Car</h5>
+                          <h5>Transmission: Petrol</h5>
+                        </td>
+                        <td> Active</td>
+                        <td> 
+                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
+                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>
+                          <img src="http://placehold.it/150x100" alt="..." class="margin">
+                        </td>
+                        <td>  Driving School Mentor George Sood</td>
+                        <td>
+                          <h5>Manufacturer: vw </h5>
+                          <h5>Type: Car</h5>
+                          <h5>Transmission: Petrol</h5>
+                        </td>
+                        <td> Active</td>
+                        <td> 
+                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
+                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>
+                          <img src="http://placehold.it/150x100" alt="..." class="margin">
+                        </td>
+                        <td>  Driving School Mentor George Sood</td>
+                        <td>
+                          <h5>Manufacturer: vw </h5>
+                          <h5>Type: Car</h5>
+                          <h5>Transmission: Petrol</h5>
+                        </td>
+                        <td> Active</td>
+                        <td> 
+                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
+                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>
+                          <img src="http://placehold.it/150x100" alt="..." class="margin">
+                        </td>
+                        <td>  Driving School Mentor George Sood</td>
+                        <td>
+                          <h5>Manufacturer: vw </h5>
+                          <h5>Type: Car</h5>
+                          <h5>Transmission: Petrol</h5>
+                        </td>
+                        <td> Active</td>
                         <td> 
                           <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
                           <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
@@ -533,64 +574,160 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       </tr>
                       </tfoot>
                     </table>
+                    </div>
+                    
                   </div>
                   <!-- /.box-body -->
                 </div>
               </div>
               <!-- /.tab-pane -->
               <div class="tab-pane" id="tab_2">
-                <div class="box box-info">
-                  <div class="box-header with-border">
-                    <h3 class="box-title">Add Class Details</h3>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="box box-info">
+                      <div class="box-header">
+                        <h3 class="box-title">General Information</h3>
+                      </div>
+                      <!-- /.box-header -->
+                      <!-- form start -->
+                      <form class="form-horizontal">
+                        <div class="box-body">
+                          <div class="form-group">
+                            <label class="col-sm-3 control-label">Vehicle Type</label>
+                            <div class="col-sm-9">
+                              <select class="form-control select2" style="width: 100%;">
+                                <option selected="selected">Alabama</option>
+                                <option>Alaska</option>
+                                <option>California</option>
+                                <option>Delaware</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option>Washington</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-3 control-label">Features</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" id="inputEmail3" placeholder="Enter Features">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-sm-3 control-label">Price Group</label>
+                            <div class="col-sm-9">
+                              <select class="form-control select2" style="width: 100%;">
+                                <option selected="selected">Alabama</option>
+                                <option>Alaska</option>
+                                <option>California</option>
+                                <option>Delaware</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option>Washington</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-3 control-label">Manufacture</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" id="inputEmail3" placeholder="Enter Manufacture">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-3 control-label">Model</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" id="inputEmail3" placeholder="Enter Model">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-3 control-label">Key Number</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" id="inputEmail3" placeholder="Enter Key Number">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-sm-3 control-label">Description</label>
+                            <div class="col-sm-9">
+                              <textarea class="form-control" placeholder="Enter Description"></textarea>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </form>
+                    </div>
                   </div>
-                  <!-- /.box-header -->
-                  <!-- form start -->
-                  <form class="form-horizontal">
-                    <div class="box-body">
-                      <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label">SurName</label>
-                        <div class="col-sm-6">
-                          <input type="text" class="form-control" id="inputEmail3" placeholder="Enter SurName">
+                  <div class="col-md-6">
+                    <div class="box box-info">
+                      <div class="box-header">
+                        <h3 class="box-title">Vehicle Image</h3>
+                      </div>
+                      <div class="timeline-item">
+                        <div class="timeline-body" style="text-align: center;">
+                          <img src="http://placehold.it/150x100" alt="..." class="margin">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label">Designation</label>
-                        <div class="col-sm-6">
-                          <input type="text" class="form-control" id="inputEmail3" placeholder="Enter Designation">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label">VAT</label>
-                        <div class="col-sm-6">
-                          <input type="text" class="form-control" id="inputEmail3" placeholder="Enter VAT">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label">Description</label>
-                        <div class="col-sm-6">
-                          <textarea class="form-control" id="inputEmail3" placeholder="Enter Description"></textarea>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-2 control-label">Class Status</label>
-                        <div class="col-sm-6">
-                          <select class="form-control">
-                            <option>Active</option>
-                            <option>Deactive</option>
-                          </select>
+                        <input type="file" name="img[]" class="file">
+                        <div class="input-group col-xs-12">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
+                          <input type="text" class="form-control input-lg" disabled placeholder="Upload Image">
+                          <span class="input-group-btn">
+                            <button class="browse btn btn-primary input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
+                          </span>
                         </div>
                       </div>
                     </div>
-                    <!-- /.box-body -->
-                    <div class="box-footer">
-                      <div class="col-sm-offset-2">
-                        <button type="reset" class="btn btn-default">Cancel</button>
-                        <button type="submit" class="btn btn-info">Save</button>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="box box-info">
+                      <div class="box-header with-border">
+                        <h3 class="box-title">Branches</h3>
                       </div>
+                      <ul class="todo-list">
+                        <li>
+                          <input type="checkbox" class="flat-red" value="">
+                          <span class="text">Design a nice theme</span>
+                          <div class="tools">
+                            <i class="fa fa-edit"></i>
+                            <i class="fa fa-trash-o"></i>
+                          </div>
+                        </li>
+                        <li>
+                              
+                          <input type="checkbox" value="">
+                          <span class="text">Make the theme responsive</span>
+                          <div class="tools">
+                            <i class="fa fa-edit"></i>
+                            <i class="fa fa-trash-o"></i>
+                          </div>
+                        </li>
+                        <li>
+                              
+                          <input type="checkbox" value="">
+                          <span class="text">Let theme shine like a star</span>
+                          <div class="tools">
+                            <i class="fa fa-edit"></i>
+                            <i class="fa fa-trash-o"></i>
+                          </div>
+                        </li>
+                        
+                      </ul>
                     </div>
-                    <!-- /.box-footer -->
-                  </form>
+                  </div>
                 </div>
+                <!-- /.box-body -->
+                <div class="box-footer">
+                  <div class="row">
+                  <div class="col-sm-6 col-sm-offset-3">
+                    <div class="col-sm-6">
+                      <button type="reset" class="btn btn-warning btn-block">Cancel</button>
+                    </div>
+                    <div class="col-sm-6">
+                      <button type="submit" class="btn btn-info btn-block">Save</button>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <!-- /.box-footer -->
               </div>
             </div>
             <!-- /.tab-content -->
@@ -699,6 +836,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Select2 -->
+<script src="../bower_components/select2/dist/js/select2.full.min.js"></script>
 <!-- DataTables -->
 <script src="../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
@@ -711,8 +850,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <script>
   $(function () {
-    $('#example1').DataTable()
+    $('#example1').DataTable();
+    $('.select2').select2();
   })
+  $(document).on('click', '.browse', function(){
+    var file = $(this).parent().parent().parent().find('.file');
+    file.trigger('click');
+  });
+  $(document).on('change', '.file', function(){
+    $(this).parent().find('.form-control').val($(this).val().replace(/C:\\fakepath\\/i, ''));
+  });
 </script>
 
 
