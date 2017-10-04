@@ -24,3 +24,10 @@ Route::get('dashboard', [
     'as'   => 'dashboard',
     'uses' => 'DashboardController@dashboard',
 ]);
+
+
+/*Master Urls*/
+Route::any('managecountry', [
+    'as'   => 'countrymanage',
+    'uses' => 'MasterController@mastercountrymanagement',
+]);

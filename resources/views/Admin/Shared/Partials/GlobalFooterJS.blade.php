@@ -1,7 +1,9 @@
-<footer class="main-footer">
+<!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
     <div class="pull-right hidden-xs">
-      <b>Version</b> 2.3.8
+      Anything you want
     </div>
-    <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
-    reserved.
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
   </footer>
