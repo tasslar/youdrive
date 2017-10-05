@@ -18,10 +18,7 @@ class MasterController extends Controller
     {
     	if(Input::has('add_country')){
     		  $country_field = $this->request->only('country_name','active');
-    		  $country       = new MasterCountry;    		 
-    		   if (!$country::validation($country_field)) {
-    		   	 return redirect()->back()->withInput()->withErrors($country->errors());
-		        }
+    		 
 
     	}
     	return view('Admin.Master.mastercountrymanagement');
