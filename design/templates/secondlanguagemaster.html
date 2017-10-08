@@ -284,13 +284,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Fahrzeugtyp Management
+        zweite Sprache Management
         <small>Insgesamt verfügbar - 35</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-book"></i> Meister</a></li>
-        <li><a href="#"><i class="fa fa-book"></i> Fahrzeug</a></li>
-        <li class="active">Fahrzeugtyp</li>
+        <li class="active">zweite Sprache</li>
       </ol>
     </section>
 
@@ -302,12 +301,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- Custom Tabs -->
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-              <li class="active"><a href="#tab_1" data-toggle="tab"><i class="fa fa-eye"></i> &nbsp; Alle Fahrzeugtypen anzeigen</a></li>
-              <li><a href="#tab_2" data-toggle="tab"><i class="fa fa-plus"></i> &nbsp; Neuen Fahrzeugtyp hinzufügen</a></li>
-              <li class="pull-right">
-                <a href="#">
-                  <i class="fa fa-refresh"></i>
+              <li class="active"><a href="#tab_1" data-toggle="tab"><i class="fa fa-eye"></i> &nbsp; Zeige alles
+              <li><a href="#tab_2" data-toggle="tab"><i class="fa fa-plus"></i> &nbsp; Neue hinzufügen</a></li>
+              <li class="dropdown pull-right">
+                <a class="dropdown-toggle text-muted" data-toggle="dropdown" href="#">
+                  <i class="fa fa-gear"></i>
                 </a>
+                <ul class="dropdown-menu">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-refresh"></i> Refresh</a></li>
+                </ul>
               </li>
               <!-- <li class="pull-right"><a href="#" class="text-muted"><i class="fa fa-gear"></i></a></li> -->
             </ul>
@@ -315,7 +317,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="tab-pane active" id="tab_1">
                 <div class="box">
                   <div class="box-header">
-                    <h3 class="box-title">Fahrzeugtyp-Details</h3>
+                    <h3 class="box-title">zweite Sprache DetailsS</h3>
                   </div>
                   <!-- /.box-header -->
                   <div class="box-body">
@@ -323,8 +325,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <thead>
                       <tr>
                         <th>S.No</th>
-                        <th>Fahrzeug-ID</th>
-                        <th>Fahrzeugname</th>
+                        <th>Sprach-ID</th>
+                        <th>Sprache Name</th>
                         <th>Status</th>
                         <th>Aktion</th>
                       </tr>
@@ -508,26 +510,29 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="tab-pane" id="tab_2">
                 <div class="box box-info">
                   <div class="box-header with-border">
-                    <h3 class="box-title">Fahrzeugtypen hinzufügen</h3>
+                    <h3 class="box-title">Details hinzufügen</h3>
                   </div>
                   <!-- /.box-header -->
                   <!-- form start -->
                   <form class="form-horizontal">
                     <div class="box-body">
                       <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label">Fahrzeugtypname</label>
+                        <label for="inputEmail3" class="col-sm-2 control-label">Sprache Name</label>
 
                         <div class="col-sm-6">
-                          <input type="text" class="form-control" id="inputEmail3" placeholder="Geben Sie den Namen des Fahrzeugtyps ein">
+                          <input type="text" class="form-control" id="inputEmail3" placeholder="eingeben Sprache Name">
                         </div>
                       </div>
-                      <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label">Bezeichnung</label>
+                      <!-- <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">Länderstatus</label>
 
                         <div class="col-sm-6">
-                          <input type="text" class="form-control" id="inputEmail3" placeholder="">
+                          <select class="form-control">
+                            <option>aktiv</option>
+                            <option>deaktiv</option>
+                          </select>
                         </div>
-                      </div>
+                      </div> -->
                     </div>
                     <!-- /.box-body -->
                     <div class="box-footer">
