@@ -9,8 +9,12 @@
       border-top: none;
     }
   </style>
+    <div id="loadspinner" class="spinner_manage" style="display: none;">
+        <img id="img-spinner" src="{{URL::asset('images/ajax-loader.gif')}}" alt="Loading" />
+    </div>
 @stop
 @section('content')
+
 <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
 <!-- Content Header (Page header) -->
@@ -41,8 +45,8 @@
           <!-- Custom Tabs -->
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-              <li class="active"><a href="#tab_1" data-toggle="tab"><i class="fa fa-eye"></i> &nbsp; Alle Länder ansehen
-              <li><a href="#tab_2" data-toggle="tab"><i class="fa fa-plus"></i> &nbsp; neues Land hinzufügen</a></li>
+              <li class="edit_blade1 active"><a href="#tab_1" data-toggle="tab"><i class="fa fa-eye"></i> &nbsp; Alle Länder ansehen
+              <li class="edit_blade"><a href="#tab_2" class="manage_country" data-toggle="tab"  data_url="{{route('addcountry',['country_id'=> $country['id']])}}"><i class="fa fa-plus"></i> &nbsp; neues Land hinzufügen</a></li>
               <li class="dropdown pull-right">
                 <a class="dropdown-toggle text-muted" data-toggle="dropdown" href="#">
                   <i class="fa fa-gear"></i>
@@ -65,182 +69,31 @@
                       <thead>
                       <tr>
                         <th>S.No</th>
-                        <th>Land-ID</th>
                         <th>Ländername</th>
                         <th>Status</th>
                         <th>Aktion</th>
                       </tr>
                       </thead>
                       <tbody>
+                      @foreach($fetch_master as $value)
                       <tr>
-                        <td>Trident</td>
-                        <td>Internet
-                          Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
+                        <td>{{$value->id}}</td>
+                        <td>{{$value->country_name}}</td>
+                        <td>{{$value->active}}</td>
                         <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
+                          <a href="#tab_2" data_url="{{route('addcountry',['country_id'=> $value->id])}}" data-toggle="tab" class="text-muted btn btn-default manage_country"><i class="fa fa-edit"></i></a>
+                          <a href="#" data_url="{{route('addcountry',['country_id'=> $value->id])}}" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
                         </td>
                       </tr>
-                      <tr>
-                        <td>Trident</td>
-                        <td>Internet
-                          Explorer 5.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td>5</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Trident</td>
-                        <td>Internet
-                          Explorer 5.5
-                        </td>
-                        <td>Win 95+</td>
-                        <td>5.5</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Trident</td>
-                        <td>Internet
-                          Explorer 6
-                        </td>
-                        <td>Win 98+</td>
-                        <td>6</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Trident</td>
-                        <td>Internet Explorer 7</td>
-                        <td>Win XP SP2+</td>
-                        <td>7</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Trident</td>
-                        <td>AOL browser (AOL desktop)</td>
-                        <td>Win XP</td>
-                        <td>6</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Firefox 1.0</td>
-                        <td>Win 98+ / OSX.2+</td>
-                        <td>1.7</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Firefox 1.5</td>
-                        <td>Win 98+ / OSX.2+</td>
-                        <td>1.8</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Firefox 2.0</td>
-                        <td>Win 98+ / OSX.2+</td>
-                        <td>1.8</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Firefox 3.0</td>
-                        <td>Win 2k+ / OSX.3+</td>
-                        <td>1.9</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Camino 1.0</td>
-                        <td>OSX.2+</td>
-                        <td>1.8</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Camino 1.5</td>
-                        <td>OSX.3+</td>
-                        <td>1.8</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Netscape 7.2</td>
-                        <td>Win 95+ / Mac OS 8.6-9.2</td>
-                        <td>1.7</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Netscape Browser 8</td>
-                        <td>Win 98SE+</td>
-                        <td>1.7</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Netscape Navigator 9</td>
-                        <td>Win 98+ / OSX.2+</td>
-                        <td>1.8</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Mozilla 1.0</td>
-                        <td>Win 95+ / OSX.1+</td>
-                        <td>1</td>
-                        <td> 
-                          <a href="#" class="text-muted btn btn-default"><i class="fa fa-edit"></i></a>
-                          <a href="#" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                      </tr>
-                      </tfoot>
+                      @endforeach
+                      <tfoot>
+                        <tr>
+                          <th>S.No</th>
+                          <th>Ländername</th>
+                          <th>Status</th>
+                          <th>Aktion</th>
+                        </tr>
+                        </tfoot>
                     </table>
                   </div>
                   <!-- /.box-body -->
@@ -248,45 +101,7 @@
               </div>
               <!-- /.tab-pane -->
               <div class="tab-pane" id="tab_2">
-                <div class="box box-info">
-                  <div class="box-header with-border">
-                    <h3 class="box-title">Länderangaben hinzufügen</h3>
-                  </div>
-                  <!-- /.box-header -->
-                  <!-- form start -->
-                  	 {!! Form::open(array('url' => route('countrymanage'), 'method' => 'post','class'=>'form-horizontal')) !!}
-                    <div class="box-body">
-                      <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label">Ländername</label>
-
-                        <div class="col-sm-6">
-                          <input type="text" name="country_name" class="form-control" id="inputEmail3" placeholder="Enter Ländername">
-                        </div>
-                         {!!$errors->first('country_name','<span class="form-error" style="color: red">:message</span>')!!}
-                      </div>
-                      <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-2 control-label">Länderstatus</label>
-
-                        <div class="col-sm-6">
-                          <select class="form-control" name="active">
-                            <option value="Active">aktiv</option>
-                            <option value="Inactive">deaktiv</option>
-                          </select>
-                        </div>
-                         {!!$errors->first('active','<span class="form-error" style="color: red">:message</span>')!!}
-                      </div>
-                    </div>
-                    <!-- /.box-body -->
-                    <div class="box-footer">
-                      <div class="col-sm-offset-2">
-                        <button type="reset" class="btn btn-default">stornieren</button>
-                        <button type="submit" name="add_country" class="btn btn-info">sparen</button>
-                      </div>
-                    </div>
-                    <!-- /.box-footer -->
-                  {!! Form::close() !!}
-
-                </div>
+                
               </div>
             </div>
             <!-- /.tab-content -->
@@ -393,5 +208,59 @@
   $(function () {
     $('#example1').DataTable()
   })
+</script>
+<script type="text/javascript">
+    $(document).on('click','.manage_country',function(){
+      $("#loadspinner").css("display", "block");
+      var country_path = $(this).attr('data_url');
+      $.ajax({
+        type:'get',
+        url:country_path,
+        success:function(response)
+        {
+          $('.edit_blade').addClass('active');
+          $('.edit_blade1').removeClass('active');
+          $("#loadspinner").css("display", "none");
+          $('#tab_2').html(response);
+        }
+      });
+    });
+    $(document).on('click','#country_add',function(){
+      $("#loadspinner").css("display", "block");
+        var token = "{{ csrf_token() }}";
+        var form_data = $('#country_form').serialize();
+        var country_url = $('.manage_country').attr('data_url');
+        console.log(country_url);
+        $.ajax({
+          type: 'post',
+          headers: {'X-CSRF-TOKEN': token},
+          url:country_url,
+          data: form_data,
+          success: function (response)
+            {
+              $("#loadspinner").css("display", "none");
+              if(response.status === 400){
+                    $.each(response.errors, function (key, val) {
+                        $("."+key).text(val);
+                        $('.'+key).delay(1000).fadeOut(4000);
+                    });
+                }
+              if(response.status === 200){
+                $('#country_form').trigger('reset');
+                $('.alert-success').css("display","block");
+                $('.alert-success').delay(1000).fadeOut(6000);
+              }
+
+            }    
+        });
+    });
+    $(document).ready(function() {
+  $(window).keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
 </script>
 @stop

@@ -31,3 +31,8 @@ Route::any('managecountry', [
     'as'   => 'countrymanage',
     'uses' => 'MasterController@mastercountrymanagement',
 ]);
+
+Route::any('addcountry/{id}',[
+	'as'   => 'addcountry',
+    'uses' => 'MasterController@addcountry',
+]);

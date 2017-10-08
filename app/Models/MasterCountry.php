@@ -15,7 +15,8 @@ class MasterCountry extends Model
     protected $table     = 'master_countries';
     protected $fillable  = [
         'country_name',
-        'active'
+        'active',
+        'deleted_at'
     ];
 
     public static function validation($inputArr)
