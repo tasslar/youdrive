@@ -40,6 +40,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
     .box{
       border-top: none;
     }
+    .skin-blue .main-header .navbar {
+        background-color: #ba68c8 !important;
+    }
+    .skin-blue .main-header .logo, .navbar:hover {
+        background-color: #9c48aa;
+    }
+    .skin-blue .main-header .logo:hover {
+        background-color: #9c48aa;
+    }
+    .skin-blue .main-header .navbar .sidebar-toggle:hover {
+      background-color: #ba68c8 !important;
+    }
   </style>
 
 </head>
@@ -51,7 +63,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="#" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>M</b>RT</span>
       <!-- logo for regular state and mobile devices -->
@@ -200,10 +212,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                  <a href="./myaccount.html" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="../index.html" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -222,18 +234,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
 
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-        </div>
-        <div class="pull-left info">
-          <p>Alexander Pierce</p>
-          <!-- Status -->
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-        </div>
-      </div>
-
       <!-- search form (Optional) -->
       <form action="#" method="get" class="sidebar-form">
         <div class="input-group">
@@ -248,30 +248,77 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">HEADER</li>
+        <!-- <li class="header">HEADER</li> -->
         <!-- Optionally, you can add icons to the links -->
-        <li class="treeview">
+        <li>
+          <a href="../index1.html">
+            <i class="fa fa-tachometer"></i> <span> Instrumententafel</span>
+          </a>
+        </li>
+        <li class="treeview active">
           <a href="#">
-            <i class="fa fa-book"></i> <span>Masters</span>
+            <i class="fa fa-book"></i> <span>Meister</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
             <li class="treeview">
-              <a href="#"><i class="fa fa-circle-o text-aqua"></i> LOCATION
+              <a href="#"><i class="fa fa-circle-o"></i> Lage
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="countrymanagement.html"><i class="fa fa-circle-o"></i> COUNTRY MANAGMENT</a></li>
-                <li><a href="areamanagement.html"><i class="fa fa-circle-o"></i> AREA MANAGMENT</a></li>
-                <li><a href="postalcodemanagement.html"><i class="fa fa-circle-o"></i> POSTALCODE_MANAGMENT</a></li>
+                <li><a href="./countrymanagement.html"><i class="fa fa-circle-o"></i> Land MANAGMENT</a></li>
+                <li><a href="./areamanagement.html"><i class="fa fa-circle-o"></i> Bereich MANAGMENT</a></li>
+                <li><a href="./postalcodemanagement.html"><i class="fa fa-circle-o"></i> Postleitzahl MANAGMENT</a></li>
               </ul>
             </li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Classes</a></li>
-          </ul>
+            <li><a href="./classesmaster.html"><i class="fa fa-circle-o "></i> Klassen</a></li>
+            <li class="active"><a href="./taxmaster.html"><i class="fa fa-circle-o"></i> Steuer</a></li>
+            <li><a href="./educationassignmaster.html"><i class="fa fa-circle-o"></i> Bildung ASSIGNMENT</a></li>
+            <li><a href="./newsmaster.html"><i class="fa fa-circle-o"></i> Nachrichten</a></li>
+            <li><a href="./rolesmaster.html"><i class="fa fa-circle-o"></i> Rollen</a></li>
+            <li><a href="./secondlanguagemaster.html"><i class="fa fa-circle-o"></i> zweite Sprache</a></li>
+            <li><a href="./educationothermaster.html"><i class="fa fa-circle-o"></i> Bildung Andere</a></li>
+            <li><a href="./servicetypemaster.html"><i class="fa fa-circle-o"></i> Bedienung Art</a></li>
+            <li class="treeview">
+              <a href="#"><i class="fa fa-circle-o text-aqua"></i> Fahrzeug
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="./vehicletypemaster.html"><i class="fa fa-circle-o"></i> Fahrzeug Art</a></li>
+                <li><a href="./vehicledetailsmaster.html"><i class="fa fa-circle-o"></i> Fahrzeug Details</a></li>
+                <li><a href="./vehiclepricegroupmaster.html"><i class="fa fa-circle-o"></i> Fahrzeug Preis Gruppe</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#"><i class="fa fa-circle-o text-aqua"></i> Ast
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="./branchdetailsmaster.html"><i class="fa fa-circle-o"></i> Basic Information</a></li>
+                <li><a href="./vehicledetailsmaster.html"><i class="fa fa-circle-o"></i> Text Modules</a></li>
+              </ul>
+            </li>
+          </ul> 
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-users"></i> <span>Fahrlehrer</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="./addinspector.html"><i class="fa fa-circle-o"></i> neuer Ausbilder</a></li>
+            <li><a href="./inspectordetails.html"><i class="fa fa-circle-o"></i> Kursleiterübersicht</a></li>
+          </ul> 
         </li>
       </ul>
       <!-- /.sidebar-menu -->
