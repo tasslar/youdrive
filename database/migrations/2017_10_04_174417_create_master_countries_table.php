@@ -18,6 +18,7 @@ class CreateMasterCountriesTable extends Migration
             $table->string('country_name', 255)->nullable();
             $table->enum('status',['Active','Inactive'])->default('Active');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

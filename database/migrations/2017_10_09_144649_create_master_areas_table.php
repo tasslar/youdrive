@@ -20,6 +20,7 @@ class CreateMasterAreasTable extends Migration
             $table->string('area_name', 255)->nullable();
             $table->enum('status',['Active','Inactive'])->default('Active');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

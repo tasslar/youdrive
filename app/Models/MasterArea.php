@@ -27,8 +27,8 @@ class MasterArea extends Model
     ];
                   
         $messages = [
-        'country_name.required' => 'You must at least give a value for your country.',
-        'active.required'       => 'Please select a category for your country status',
+        'country_name.required' => 'You must at least give a value for your area.',
+        'active.required'       => 'Please select a category for your area status',
     ];
         $validator = \Validator::make($inputArr, $rules, $messages);
         return $validator;

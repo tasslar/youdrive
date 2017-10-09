@@ -54,5 +54,5 @@ Route::any('managearea',[
 /*add and edit country*/
 Route::any('addarea/{id}',[
 	'as'   => 'addarea',
-    'uses' => 'MasterController@addcountry',
+    'uses' => 'MasterController@addarea',
 ]);

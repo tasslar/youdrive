@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use App\Models\MasterCountry;
+use App\Models\MasterArea;
 use Validator;
 use Response;
 use Session;
@@ -98,7 +99,7 @@ class MasterController extends Controller
                 ];
         return view('Admin.Master.masterarea',$data);
     }
-    public function addcountry(Request  $request,$data)
+    public function addarea(Request  $request,$data)
     {
         $inputArr = $request->only('id','country_name','active');
         if(Input::has('country_name')){
@@ -137,12 +138,13 @@ class MasterController extends Controller
         if($data == 0){
                 $inputVal = array(
                                     'id'           => old('id'),
-                                    'country_name' => old('country_name'),
+                                    'country_id'   => old('country_id'),
+                                    'area_name'    => old('area_name'),
                                     'active'       => old('active')
                                  );
             }else{
-                $fetch_val = MasterCountry::where('id',$data)->first();
-                $inputVal = array(
+                $fetch_val = MasterArea::where('id',$data)->first();
+                $inputVal  = array(
                                     'id'           => $fetch_val->id,
                                     'country_name' => $fetch_val->country_name,
                                     'active'       => $fetch_val->active
@@ -151,6 +153,6 @@ class MasterController extends Controller
             $data = [
                         'inputVal' =>$inputVal
                     ];
-        return view('Admin.Master.addcountry_tab',$data);
+        return view('Admin.Master.addarea_tab',$data);
     } 
 }
