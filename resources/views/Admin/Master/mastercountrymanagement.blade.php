@@ -14,7 +14,6 @@
     </div>
 @stop
 @section('content')
-
 <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
 <!-- Content Header (Page header) -->
@@ -23,6 +22,11 @@
         Land Management
         <small>Insgesamt verfügbar - 35</small>
       </h1>
+      @if(Session::has('successdata'))
+        <div class="alert alert-success" id="message-err">{{ Session::get('successdata') }}
+            <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+        </div>
+        @endif
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-book"></i> Meister</a></li>
         <li class="dropdown">
@@ -45,7 +49,7 @@
           <!-- Custom Tabs -->
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-              <li class="edit_blade1 active"><a href="#tab_1" data-toggle="tab"><i class="fa fa-eye"></i> &nbsp; Alle Länder ansehen
+              <li class="edit_blade1 active"><a href="#tab_1" class="manage_countrys" data-toggle="tab"><i class="fa fa-eye"></i> &nbsp; Alle Länder ansehen
               <li class="edit_blade"><a href="#tab_2" class="manage_country" data-toggle="tab"  data_url="{{route('addcountry',['country_id'=> $country['id']])}}"><i class="fa fa-plus"></i> &nbsp; neues Land hinzufügen</a></li>
               <li class="dropdown pull-right">
                 <a class="dropdown-toggle text-muted" data-toggle="dropdown" href="#">
@@ -82,7 +86,7 @@
                         <td>{{$value->active}}</td>
                         <td> 
                           <a href="#tab_2" data_url="{{route('addcountry',['country_id'=> $value->id])}}" data-toggle="tab" class="text-muted btn btn-default manage_country"><i class="fa fa-edit"></i></a>
-                          <a href="#" data_url="{{route('addcountry',['country_id'=> $value->id])}}" class="text-muted btn btn-danger"><i class="fa fa-trash-o"></i></a>
+                          <a href="#" data_url="{{route('addcountry',['country_id'=> $value->id])}}" data_id = "{{$value->id}}" class="text-muted btn btn-danger delete_counrty"><i class="fa fa-trash-o"></i></a>
                         </td>
                       </tr>
                       @endforeach
@@ -189,6 +193,10 @@
   </aside>
   <div class="control-sidebar-bg"></div>
 </div>
+<!-- <form  method="post" id="delete_form"> -->
+   {!! Form::open(array('class'=>'form-horizontal','id'=>'delete_form','url'=>route('delete_counrty'))) !!}
+  <input type="hidden" name="delete_id" id="delete_id">
+   {!! Form::close() !!}
 @stop
 @section('script')
 <script src="{{ asset('template/bower_components/jquery/dist/jquery.min.js')  }}"></script>
@@ -260,6 +268,14 @@
       event.preventDefault();
       return false;
     }
+  });
+  $('.manage_countrys').click(function(){
+     location.reload();
+  });
+  $(document).on('click','.delete_counrty',function(){
+    var delete_id = $(this).attr('data_id');
+    $('#delete_id').val(delete_id);
+    $('#delete_form').submit();
   });
 });
 </script>

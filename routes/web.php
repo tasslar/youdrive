@@ -36,3 +36,8 @@ Route::any('addcountry/{id}',[
 	'as'   => 'addcountry',
     'uses' => 'MasterController@addcountry',
 ]);
+/*delete country*/
+Route::any('delete_counrty',[
+	'as'   => 'delete_counrty',
+    'uses' => 'MasterController@delete_counrty',
+]);

@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Input;
 use App\Models\MasterCountry;
 use Validator;
 use Response;
+use Session;
 class MasterController extends Controller
 {
 	protected $request;
@@ -80,4 +81,11 @@ class MasterController extends Controller
                     ];
         return view('Admin.Master.addcountry_tab',$data);
     }
+    public function delete_counrty()
+    {
+        $delete_id = $this->request->only('delete_id');
+        $fetch_val = MasterCountry::where('id',$delete_id['delete_id'])->delete();
+        Session::flash('successdata', "Successfully Deleted");         
+        return redirect('managecountry');
+    }   
 }
