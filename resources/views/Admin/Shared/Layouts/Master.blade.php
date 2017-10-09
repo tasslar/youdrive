@@ -265,7 +265,7 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="{{route('countrymanage')}}"><i class="fa fa-circle-o"></i> COUNTRY MANAGMENT</a></li>
-                <li><a href="areamanagement.html"><i class="fa fa-circle-o"></i> AREA MANAGMENT</a></li>
+                <li><a href="{{route('areamanagement')}}"><i class="fa fa-circle-o"></i> AREA MANAGMENT</a></li>
                 <li><a href="postalcodemanagement.html"><i class="fa fa-circle-o"></i> POSTALCODE_MANAGMENT</a></li>
               </ul>
             </li>

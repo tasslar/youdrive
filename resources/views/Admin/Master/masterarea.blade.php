@@ -74,6 +74,7 @@
                       <tr>
                         <th>S.No</th>
                         <th>Ländername</th>
+                        <th>Bereichsname</th>
                         <th>Status</th>
                         <th>Aktion</th>
                       </tr>
@@ -82,6 +83,7 @@
                       @foreach($fetch_master as $value)
                       <tr>
                         <td>{{$value->id}}</td>
+                        <td>{{$value->country_name}}</td>
                         <td>{{$value->country_name}}</td>
                         <td>{{$value->active}}</td>
                         <td> 
@@ -92,10 +94,11 @@
                       @endforeach
                       <tfoot>
                         <tr>
-                          <th>S.No</th>
-                          <th>Ländername</th>
-                          <th>Status</th>
-                          <th>Aktion</th>
+                        <th>S.No</th>
+                        <th>Ländername</th>
+                        <th>Bereichsname</th>
+                        <th>Status</th>
+                        <th>Aktion</th>
                         </tr>
                         </tfoot>
                     </table>
