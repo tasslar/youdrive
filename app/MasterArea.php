@@ -3,8 +3,8 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
-class MasterCountry extends Model
+
+class MasterArea extends Model
 {
     use softDeletes;
     /**
@@ -14,21 +14,21 @@ class MasterCountry extends Model
      */
     protected $table     = 'master_countries';
     protected $fillable  = [
-        'country_name',
+        'country_id',
+        'area_name'
         'status',
-        'deleted_at'
     ];
 
     public static function validation($inputArr)
     {
         $rules     = [
         'country_name'   => ['required'],
-        'active'         => ['required'],
+        'status'         => ['required'],
     ];
                   
         $messages = [
         'country_name.required' => 'You must at least give a value for your country.',
-        'active.required'       => 'Please select a category for your country status',
+        'status.required'       => 'Please select a category for your country status',
     ];
         $validator = \Validator::make($inputArr, $rules, $messages);
         return $validator;
