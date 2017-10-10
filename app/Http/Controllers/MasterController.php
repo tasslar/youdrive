@@ -19,7 +19,7 @@ class MasterController extends Controller
     }
     public function mastercountrymanagement(Request  $request)
     {   
-        $fetch_master = MasterCountry::get();
+        $fetch_master = MasterCountry::where('status','Active')->get();
         $country_value = array('id'=>0);
         $data = [
                     'country'      => $country_value,
@@ -70,7 +70,7 @@ class MasterController extends Controller
                                     'active'       => old('active')
                                  );
             }else{
-                $fetch_val = MasterCountry::where('id',$data)->first();
+                $fetch_val = MasterCountry::where('status','Active')->where('id',$data)->first();
                 $inputVal = array(
                                     'id'           => $fetch_val->id,
                                     'country_name' => $fetch_val->country_name,
@@ -78,7 +78,8 @@ class MasterController extends Controller
                                  );
             }
             $data = [
-                        'inputVal' =>$inputVal
+                        'master_country' => $master_country,
+                        'inputVal'       => $inputVal
                     ];
         return view('Admin.Master.addcountry_tab',$data);
     }
@@ -101,13 +102,15 @@ class MasterController extends Controller
     }
     public function addarea(Request  $request,$data)
     {
-        $inputArr = $request->only('id','country_name','active');
-        if(Input::has('country_name')){
+        $inputArr = $request->only('country_id','area_name','status');
+        if(Input::has('country_id')){
             $rules   = array(
-                            'country_name'=>"required",
-                            'active'      => 'required',
+                            'country_name'  =>"required",
+                            'area_name'     =>"required",
+                            'status'        => "required"
                         );
-            $validator = MasterCountry::validation($inputArr);
+            $validator = MasterArea::validation($inputArr);
+            dd($validator);
             if(! $validator->passes()){
                 if($this->request->ajax()){
                         return Response::json(array(
@@ -150,8 +153,10 @@ class MasterController extends Controller
                                     'active'       => $fetch_val->active
                                  );
             }
+            $master_country = MasterCountry::where('status','Active')->get();
             $data = [
-                        'inputVal' =>$inputVal
+                        'master_country' => $master_country,
+                        'inputVal'       => $inputVal
                     ];
         return view('Admin.Master.addarea_tab',$data);
     } 
