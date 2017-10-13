@@ -20,42 +20,43 @@ Route::get('manage_branches', [
     'uses' => 'BranchesController@branch_list',
 ]);
 
-Route::get('dashboard', [
-    'as'   => 'dashboard',
-    'uses' => 'DashboardController@dashboard',
-]);
 
-
+Route::group(['middleware' => 'userrole_student'], function ()
+    {
+            Route::get('/home', 'HomeController@index')->name('home');
+    });
 /*Master Urls*/
 
-/*manage country*/
-Route::any('managecountry', [
-    'as'   => 'countrymanage',
-    'uses' => 'MasterController@mastercountrymanagement',
-]);
-/*add and edit country*/
-Route::any('addcountry/{id}',[
-	'as'   => 'addcountry',
-    'uses' => 'MasterController@addcountry',
-]);
+Route::group(['middleware' => 'userrole_inspector'], function ()
+    {
+        /*manage country*/
+        Route::any('managecountry', [
+            'as'   => 'countrymanage',
+            'uses' => 'MasterController@mastercountrymanagement',
+        ]);
+        /*add and edit country*/
+        Route::any('addcountry/{id}',[
+            'as'   => 'addcountry',
+            'uses' => 'MasterController@addcountry',
+        ]);
 
-/*delete country*/
-Route::any('delete_counrty',[
-	'as'   => 'delete_counrty',
-    'uses' => 'MasterController@delete_counrty',
-]);
+        /*delete country*/
+        Route::any('delete_counrty',[
+            'as'   => 'delete_counrty',
+            'uses' => 'MasterController@delete_counrty',
+        ]);
 
-/*manage area*/
-Route::any('managearea',[
-	'as'   => 'areamanagement',
-    'uses' => 'MasterController@areamanagement',
-]);
+        /*manage area*/
+        Route::any('managearea',[
+            'as'   => 'areamanagement',
+            'uses' => 'MasterController@areamanagement',
+        ]);
 
-/*add and edit country*/
-Route::any('addarea/{id}',[
-	'as'   => 'addarea',
-    'uses' => 'MasterController@addarea',
-]);
+        /*add and edit country*/
+        Route::any('addarea/{id}',[
+            'as'   => 'addarea',
+            'uses' => 'MasterController@addarea',
+        ]);
+    });
+
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

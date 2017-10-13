@@ -24,7 +24,7 @@ class Kernel extends HttpKernel
     /**
      * The application's route middleware groups.
      *
-     * @var array
+     * @var array 
      */
     protected $middlewareGroups = [
         'web' => [
@@ -57,5 +57,7 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'userrole_inspector' => \App\Http\Middleware\userrole_inspector::class,
+        'userrole_student' => \App\Http\Middleware\userrole_student::class
     ];
 }
