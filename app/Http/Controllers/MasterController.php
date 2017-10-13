@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use App\Models\MasterCountry;
-use App\Models\MasterArea;
+use App\Models\MasterArea as areaname;
 use Validator;
 use Response;
 use Session;
@@ -17,6 +17,7 @@ class MasterController extends Controller
         
         $this->request = $request;
     }
+    /*master country*/
     public function mastercountrymanagement(Request  $request)
     {   
         $fetch_master = MasterCountry::where('status','Active')->get();
@@ -27,6 +28,7 @@ class MasterController extends Controller
                 ];
     	return view('Admin.Master.mastercountry',$data);
     }
+    /*master add and edit country*/
     public function addcountry(Request  $request,$data)
     {
         $inputArr = $request->only('id','country_name','active');
@@ -83,6 +85,7 @@ class MasterController extends Controller
                     ];
         return view('Admin.Master.addcountry_tab',$data);
     }
+    /*delete country*/
     public function delete_counrty()
     {
         $delete_id = $this->request->only('delete_id');
@@ -90,6 +93,7 @@ class MasterController extends Controller
         Session::flash('successdata', "Successfully Deleted");         
         return redirect('managecountry');
     } 
+    /*master area management*/
     public function areamanagement()
     {
         $fetch_master = MasterCountry::get();
@@ -100,6 +104,7 @@ class MasterController extends Controller
                 ];
         return view('Admin.Master.masterarea',$data);
     }
+    /*add and edit area*/
     public function addarea(Request  $request,$data)
     {
         $inputArr = $request->only('country_id','area_name','status');
@@ -109,7 +114,7 @@ class MasterController extends Controller
                             'area_name'     =>"required",
                             'status'        => "required"
                         );
-            $validator = MasterArea::validation($inputArr);
+            $validator = areaname::validation($inputArr);
             dd($validator);
             if(! $validator->passes()){
                 if($this->request->ajax()){
@@ -121,7 +126,7 @@ class MasterController extends Controller
             }
             $insertVal = [
                             'country_name' => $inputArr['country_name'],
-                            'active'       => $inputArr['active']
+                            'status'       => $inputArr['active']
                          ];
             if($inputArr['id'] == null){
                 $insert_tbl = MasterCountry::create($insertVal);
@@ -143,14 +148,14 @@ class MasterController extends Controller
                                     'id'           => old('id'),
                                     'country_id'   => old('country_id'),
                                     'area_name'    => old('area_name'),
-                                    'active'       => old('active')
+                                    'status'       => old('active')
                                  );
             }else{
                 $fetch_val = MasterArea::where('id',$data)->first();
                 $inputVal  = array(
                                     'id'           => $fetch_val->id,
                                     'country_name' => $fetch_val->country_name,
-                                    'active'       => $fetch_val->active
+                                    'status'       => $fetch_val->active
                                  );
             }
             $master_country = MasterCountry::where('status','Active')->get();

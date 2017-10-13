@@ -13,22 +13,26 @@ class MasterArea extends Model
      * @var array
      */
     protected $table     = 'master_area';
-    protected $fillable  = ['country_id','area_name','status','deleted_at'];
+    protected $fillable  = [
+        'country_id',
+        'area_name',
+        'status',
+        'deleted_at'
+    ];
 
     public static function validation($inputArr)
     {
         $rules     = [
-                'country_id'   => ['required'],
-                'area_name'   => ['required'],
-                'status'         => ['required'],
-            ];
+        'country_id'   => ['required'],
+        'area_name'         => ['required'],
+        'status'         => ['required'],
+    ];
                   
         $messages = [
         'country_id.required' => 'You must at least give a value for your country name.',
-        'area_name.required' => 'You must at least give a value for your area name.',
-        'active.required'       => 'Please select a category for your area status',
+        'area_name.required' => 'You must at least give a value for your Area name.',
+        'status.required'       => 'Please select a category for your country status',
     ];
         $validator = \Validator::make($inputArr, $rules, $messages);
         return $validator;
     }
-}

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 class MasterCountry extends Model
 {
+
     use softDeletes;
     /**
      * The attributes that are mass assignable.

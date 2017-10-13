@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('login');
 });
 
 Route::get('manage_branches', [
@@ -56,3 +56,6 @@ Route::any('addarea/{id}',[
 	'as'   => 'addarea',
     'uses' => 'MasterController@addarea',
 ]);
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
