@@ -26,8 +26,8 @@ class userrole_student
                  if($admin){
                     return redirect('managecountry');    
                  }
-                /*Auth::guard('user')->logout();
-                return abort("403","Invalid access");*/
+                Auth::guard('user')->logout();
+                return abort("403","Invalid access");
             }
             return $next($request);
         }

@@ -23,7 +23,7 @@ Route::get('manage_branches', [
 
 Route::group(['middleware' => 'userrole_student'], function ()
     {
-            Route::get('/home', 'HomeController@index')->name('home');
+            Route::get('/home', 'HomeController@index');
     });
 /*Master Urls*/
 

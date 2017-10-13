@@ -203,7 +203,11 @@
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  @guest
+                  @else
+                  <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"" class="btn btn-default btn-flat">Sign out</a>
+                  @endguest
                 </div>
               </li>
             </ul>
@@ -277,6 +281,9 @@
     </section>
     <!-- /.sidebar -->
   </aside>
+  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
   
    @yield('content')
 @include('Admin.Shared.Partials.GlobalFooterJS')
