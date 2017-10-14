@@ -25,6 +25,23 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('user_role') ? ' has-error' : '' }}">
+                            <label for="user_role" class="col-md-4 control-label">User Role</label>
+
+                            <div class="col-md-6">
+                                <select class="form-control" name="user_role">
+                                    <option value="1" {{old('user_role') == 1 ? 'selected=""':''}}>Inspector</option>
+                                    <option value="2" {{old('user_role') == 2 ? 'selected=""':''}}>student</option>
+                                </select>
+
+                                @if ($errors->has('user_role'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('user_role') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
