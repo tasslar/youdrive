@@ -1,0 +1,22 @@
+.nav-tabs>li.active>a{
+	background-color: #fff;
+    border: 1px solid #ba68c8!important;
+        border-bottom-color: transparent!important;
+}
+.nav-tabs>li>a:hover{
+	background-color: #ba68c8!important;
+	color: white!important;
+
+}
+.nav-tabs>li>a{
+	color: black!important;
+
+}
+.nav-tabs {
+    border-bottom: 1px solid #ba68c8!important;
+}
+.form-control{
+	    background-color: transparent!important;
+    background-image: none;
+    border: 1px solid #dcb4e3!important;
+}

@@ -1,0 +1,60 @@
+
+.instructor{
+	background:  #ba68c8;
+	color: white;
+border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.instructor_pos{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+.header1  li{
+	float:left;
+	padding: 20px 20px 10px 20px;
+
+}
+.header1 .update, .search{
+    margin-top: 8px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.header1  li:nth-child(1){
+		 
+	
+}
+.header1  li:nth-child(4){
+		     
+	
+}
+.header1  li:nth-child(5){
+	float: right;
+}
+.header1  li:nth-child(6){
+	float: right;
+}
+.header1  li a{
+
+	color:white;
+}
+.general, .image, .private, .operation, .account, .roll{
+	    background: #f7f7f7;
+    padding: 21px;
+    border: 1px solid rgb(220, 180, 227);
+    margin-top: 15px;
+
+}
+.section1{
+	    padding-bottom: 50px;
+	    padding-top: 200px;
+}
+.footer{
+    background: #dadada;
+    color: black;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+.footer ul li a{
+color: black;
+}
