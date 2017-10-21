@@ -20,3 +20,24 @@
     background-image: none;
     border: 1px solid #dcb4e3!important;
 }
+.breadcrumb>li+li:before{
+	content: ">"!important;
+}
+.breadcrumb {
+    padding: 8px 15px;
+     margin: 10px!important;
+    list-style: none;
+     background-color: transparent!important;
+    border-radius: 4px;
+    
+}
+.breadcrumb>li a{
+	color: black!important;
+}
+.nav-pills>li.active>a{
+	background-color: #ba68c8!important;
+}
+.nav-stacked>li {
+    float: none;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    }

@@ -14,15 +14,27 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 	padding: 20px 20px 10px 20px;
 
 }
-.header1 .update, .search{
+.tab-pill{
+        min-height: 342px;
+}
+/*.header1 .update, .search{
     margin-top: 8px;
     padding-left: 0px;
     padding-right: 0px;
-}
-.header1  li:nth-child(1){
+}*/
+.header1  .update{
+	padding: 10px 10px 10px 20px;
 		 
 	
 }
+.section1 p:nth-child(1){
+       padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border-bottom: 1px solid #ba68c8;;
+    margin-bottom: 25px;
+    }
+
 .header1  li:nth-child(4){
 		     
 	
@@ -33,9 +45,13 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 .header1  li:nth-child(6){
 	float: right;
 }
+.header2  li{
+	float: right!important;
+}
 .header1  li a{
 
 	color:white;
+	position: relative;
 }
 .general, .image, .private, .operation, .account, .roll{
 	    background: #f7f7f7;
@@ -46,15 +62,80 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 .section1{
 	    padding-bottom: 50px;
-	    padding-top: 200px;
+	    
 }
 .footer{
     background: #dadada;
     color: black;
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
 }
 .footer ul li a{
 color: black;
+}
+.create_new{
+	       background: #f7f7f7;
+    padding: 12px;
+    color: #423131;
+    margin-top: 95px;
+    border: 1px solid;
+}
+.genral_ul{
+    border: 1px solid #ba68c8;
+    border-radius: 5px;
+    width: 43%;
+
+}
+h1 {
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+
+    .brand-pills > li > a {
+        border-top-right-radius: 0px;
+    	border-bottom-right-radius: 0px;
+    }
+    
+    li.brand-nav.active a:before{
+    	    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 9px solid #ba68c8;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    right: 100%;
+    z-index: 2;
+    }
+}
+.nav_create{
+	    
+    border: 1px solid black!important;
+        margin-top: 25px;
+        border-radius: 6px;
+}
+.nav-pills>li>a{
+	    color: black;
+}
+.nav-pills>li>a:hover{
+	background: 
+}
+.create_bread{
+	padding: 0px!important;
+}
+.header1  li>a>.label {
+  position: absolute;
+    top: -5px;
+    right: -9px;
+    text-align: center;
+    font-size: 9px;
+    padding: 2px 3px;
+    line-height: .9;
+}
+.class{
+	padding: 8px;
+	border:1px solid black;
 }
