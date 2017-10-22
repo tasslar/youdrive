@@ -35,15 +35,16 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 .hide_id{
 
-   position: relative;
+  position: relative;
     left: 659px;
     top: -29px;
     width: 50px;
-    border-radius: 51px;
+    border-radius: 6px;
     /* font-size: 88px; */
     /* transform: rotate(91deg); */
     background: #ba68c8;
     padding: 15px;
+    padding-bottom: 5px;
     
 
 }
@@ -106,6 +107,9 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     border: 1px solid rgb(220, 180, 227);
     margin-top: 15px;
 
+}
+.info-fa{
+    padding: 40px;
 }
 .section1{
 	    padding-bottom: 50px;
