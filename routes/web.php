@@ -11,7 +11,9 @@
 |
 */
 
+/*Route::get('/info',function(){ phpinfo(); });*/
 Route::get('/', function () {
+    /*phpinfo();*/
     return redirect('login');
 });
 
