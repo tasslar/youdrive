@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/info',function(){ phpinfo(); });
+/*Route::get('/info',function(){ phpinfo(); });*/
 Route::get('/', function () {
-    phpinfo();
-    // return redirect('login');
+    /*phpinfo();*/
+    return redirect('login');
 });
 
 Route::get('manage_branches', [
