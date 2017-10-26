@@ -13,7 +13,8 @@
 
 Route::get('/info',function(){ phpinfo(); });
 Route::get('/', function () {
-    return redirect('login');
+    phpinfo();
+    // return redirect('login');
 });
 
 Route::get('manage_branches', [
