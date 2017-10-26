@@ -15,10 +15,10 @@ Route::get('/', function () {
     return redirect('login');
 });
 
-Route::get('manage_branches', [
-    'as'   => 'branch_list',
-    'uses' => 'BranchesController@branch_list',
-]);
+// Route::get('manage_branches', [
+//     'as'   => 'branch_list',
+//     'uses' => 'BranchesController@branch_list',
+// ]);
 
 
 Route::group(['middleware' => 'userrole_student'], function ()
